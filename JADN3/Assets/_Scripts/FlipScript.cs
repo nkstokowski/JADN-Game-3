@@ -10,6 +10,11 @@ public class FlipScript : MonoBehaviour {
     public Color topBackground;
     public Color bottomBackground;
 
+    public Color topGround;
+    public Color bottomGround;
+
+    public Material groundMat;
+
     private Quaternion targetRotation;
     private float flipAngle = 0f;
     private bool flipping = false;
@@ -42,6 +47,8 @@ public class FlipScript : MonoBehaviour {
             Color targetColor = (faceUp) ? bottomBackground : topBackground;
             topCamera.backgroundColor = Color.Lerp(topCamera.backgroundColor, targetColor, 10 * speed * Time.deltaTime);
             bottomCamera.backgroundColor = Color.Lerp(bottomCamera.backgroundColor, targetColor, 10 * speed * Time.deltaTime);
+            targetColor = (faceUp) ? bottomGround : topGround;
+            //groundMat.color = Color.Lerp(groundMat.color, targetColor, 100 * speed * Time.deltaTime);
 
             if (!halfway && Quaternion.Angle(transform.rotation, targetRotation) < 130f)
             {

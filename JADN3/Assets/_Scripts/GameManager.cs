@@ -18,13 +18,13 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
     public void flipStatus(bool isTopShowing)
     {
         faceUp = isTopShowing;
-        //topPlayer.GetComponent<NavMeshAgent>().isStopped = true;
+        topPlayer.GetComponent<NavMeshAgent>().isStopped = true;
         bottomPlayer.GetComponent<NavMeshAgent>().isStopped = true;
     }
 }
