@@ -4,9 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
+  - Gem
+=======
   - Interact
   - Spell
   - Wall
+>>>>>>> 670d393214ec8be3c570f080e9957eba6f1963a1
   layers:
   - Default
   - TransparentFX
