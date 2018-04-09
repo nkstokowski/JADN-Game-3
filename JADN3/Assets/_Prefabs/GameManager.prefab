@@ -9,17 +9,18 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1976809200594570}
+  m_RootGameObject: {fileID: 1320873785692170}
   m_IsPrefabParent: 1
---- !u!1 &1976809200594570
+--- !u!1 &1320873785692170
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4660073540548162}
-  - component: {fileID: 114853256934073004}
+  - component: {fileID: 4505009051035038}
+  - component: {fileID: 114612749125748286}
+  - component: {fileID: 114813825362291272}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -27,12 +28,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4660073540548162
+--- !u!4 &4505009051035038
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1976809200594570}
+  m_GameObject: {fileID: 1320873785692170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.0336275, y: 5.7509503, z: -11.544972}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,12 +41,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114853256934073004
+--- !u!114 &114612749125748286
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1976809200594570}
+  m_GameObject: {fileID: 1320873785692170}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5bc119c5119d6249b55ed9979599cdb, type: 3}
@@ -55,3 +56,18 @@ MonoBehaviour:
   bottomPlayer: {fileID: 0}
   flipper: {fileID: 0}
   faceUp: 0
+--- !u!114 &114813825362291272
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1320873785692170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b247c47985b9e344882f740038fd6471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - tag: Spell
+    prefab: {fileID: 1984434153450228, guid: 72a94b6e91bdcd04fad3b8bc81f9ab6f, type: 2}
+    size: 3
