@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Gem
   - Spell
+  - Interact
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -15,10 +17,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - TopLayer
+  - BottomLayer
+  - TopBlock
+  - BottomBlock
   - 
   - 
   - 

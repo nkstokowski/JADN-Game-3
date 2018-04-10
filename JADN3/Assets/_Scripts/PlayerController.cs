@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour {
             if(Quaternion.Angle(transform.rotation, targetRotation) < 5f)
             {
                 // Complete Rotation
-                Debug.Log("Rotation Done");
+                //Debug.Log("Rotation Done");
                 transform.rotation = targetRotation;
                 rotating = false;
 
@@ -63,11 +63,13 @@ public class PlayerController : MonoBehaviour {
     // Fire a spell at transform
     private void TurnTowards(Transform target)
     {
-        Debug.Log("Starting Rotation");
+        //Debug.Log("Starting Rotation");
         agent.isStopped = true;
         agent.velocity = Vector3.zero;
         // Rotate to transform
-        targetRotation = Quaternion.LookRotation(target.position - transform.position);
+        Interactable obj = target.GetComponent<Interactable>();
+        Vector3 targetAimPoint = obj.GetSpellHitPoint();
+        targetRotation = Quaternion.LookRotation(targetAimPoint - transform.position);
         rotating = true;
 
         // Spell fires once rotation is complete
