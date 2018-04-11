@@ -14,10 +14,12 @@ public class PlayerController : MonoBehaviour {
 
     private bool rotating = false;
     private Quaternion targetRotation;
-
+	//private Vector3 temp;
+	private Vector3 save;
     void Start()
     {
         objectPooler = ObjectPooling.Instance;
+		//temp = transform.position;
     }
 
     void Update () {
@@ -35,7 +37,7 @@ public class PlayerController : MonoBehaviour {
                         break;
 				default:
 					MoveTo (hit.point);
-
+					save = hit.transform.position;
                         break;
                 }
 
@@ -46,6 +48,7 @@ public class PlayerController : MonoBehaviour {
         // Rotation is active
         if (rotating)
         {
+			gameObject.transform.position = save;
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
             if(Quaternion.Angle(transform.rotation, targetRotation) < 5f)
             {
