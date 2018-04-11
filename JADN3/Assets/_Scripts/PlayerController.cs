@@ -33,8 +33,9 @@ public class PlayerController : MonoBehaviour {
                     case "Interact":
                         TurnTowards(hit.transform);
                         break;
-                    default:
-                        MoveTo(hit.point);
+				default:
+					MoveTo (hit.point);
+
                         break;
                 }
 
@@ -50,6 +51,8 @@ public class PlayerController : MonoBehaviour {
             {
                 // Complete Rotation
                 //Debug.Log("Rotation Done");
+				agent.velocity = Vector3.zero;
+				agent.isStopped = true;
                 transform.rotation = targetRotation;
                 rotating = false;
 
@@ -80,5 +83,6 @@ public class PlayerController : MonoBehaviour {
     {
         agent.isStopped = false;
         agent.SetDestination(point);
+
     }
 }

@@ -437,6 +437,16 @@ Prefab:
       propertyPath: cam
       value: 
       objectReference: {fileID: 906444439}
+    - target: {fileID: 195341211253560786, guid: 25c17989a772759479120497c1a84c53,
+        type: 2}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 195341211253560786, guid: 25c17989a772759479120497c1a84c53,
+        type: 2}
+      propertyPath: m_AutoRepath
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 25c17989a772759479120497c1a84c53, type: 2}
   m_IsPrefabParent: 0
@@ -1768,6 +1778,11 @@ Prefab:
       propertyPath: cam
       value: 
       objectReference: {fileID: 592216376}
+    - target: {fileID: 195237621695142278, guid: 495fdf6a91ea82d41b9f563044c43860,
+        type: 2}
+      propertyPath: m_AutoRepath
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 495fdf6a91ea82d41b9f563044c43860, type: 2}
   m_IsPrefabParent: 0
@@ -2137,6 +2152,7 @@ MonoBehaviour:
   groundMat: {fileID: 2100000, guid: 3f3eb11f68c607144aa56d9f83cd26c9, type: 2}
   speed: 0.5
   gameManager: {fileID: 209625335}
+  canFlip: 1
 --- !u!4 &1638232162
 Transform:
   m_ObjectHideFlags: 0
@@ -2185,7 +2201,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 172276cc9c6eac545ac9183214a11a68, type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1713215532}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

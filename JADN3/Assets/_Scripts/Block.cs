@@ -21,10 +21,11 @@ public class Block : MonoBehaviour, Interactable {
     private NavMeshObstacle myObstacle;
     private Vector3 aimPosition;
     private enum MoveDir { Forward, Backward, Right, Left };
+	public FlipScript flip;
 
 	// Use this for initialization
 	void Start () {
-
+		flip = GameObject.Find ("Levels").GetComponent<FlipScript> ();
         myCollider = GetComponent<BoxCollider>();
         myObstacle = GetComponent<NavMeshObstacle>();
 
@@ -46,8 +47,10 @@ public class Block : MonoBehaviour, Interactable {
 	void Update () {
         if (moving)
         {
+			flip.canFlip = false;
             transform.position = Vector3.Lerp(transform.position, targetPosition, moveSpeed * Time.deltaTime);
-            if(Vector3.Distance(transform.position, targetPosition) < .1f)
+
+            if(Vector3.Distance(transform.position, targetPosition) < .0001f)
             {
                 transform.position = targetPosition;
                 //Debug.Log("Moving complete");

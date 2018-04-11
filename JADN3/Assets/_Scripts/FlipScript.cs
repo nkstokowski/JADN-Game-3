@@ -24,6 +24,8 @@ public class FlipScript : MonoBehaviour {
 
     public GameManager gameManager;
 
+	GameObject spell = null;
+	public bool canFlip = true;
 
 	// Use this for initialization
 	void Start () {
@@ -33,13 +35,26 @@ public class FlipScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyUp(KeyCode.F) && !flipping)
-        {
-            gameManager.flipStatus(!faceUp);
-            flipAngle = (flipAngle == 180) ? 0f : 180f;
-            targetRotation = Quaternion.AngleAxis(flipAngle, Vector3.left);
-            flipping = true;
-        }
+		spell = GameObject.FindGameObjectWithTag ("Spell");
+		if (spell == null) {
+			canFlip = true;
+		} else {
+			canFlip = false;
+			//Invoke ("SetTrue", 6f);
+		}
+
+
+		if (canFlip) 
+		{
+			if (Input.GetKeyUp(KeyCode.F) && !flipping)
+			{
+				gameManager.flipStatus(!faceUp);
+				flipAngle = (flipAngle == 180) ? 0f : 180f;
+				targetRotation = Quaternion.AngleAxis(flipAngle, Vector3.left);
+				flipping = true;
+			}
+		}
+        
 
         if (flipping)
         {
@@ -68,4 +83,7 @@ public class FlipScript : MonoBehaviour {
         }
 
     }
+	void SetTrue() {
+		canFlip = true;
+	}
 }
