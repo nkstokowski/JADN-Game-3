@@ -17,17 +17,17 @@ public class Block : MonoBehaviour, Interactable {
 
     private bool moving;
     private Vector3 targetPosition;
+    public Vector3 originalPosition;
     private BoxCollider myCollider;
     private NavMeshObstacle myObstacle;
     private Vector3 aimPosition;
-    private enum MoveDir { Forward, Backward, Right, Left };
-	public FlipScript flip;
 
 	// Use this for initialization
 	void Start () {
-		flip = GameObject.Find ("Levels").GetComponent<FlipScript> ();
+
         myCollider = GetComponent<BoxCollider>();
         myObstacle = GetComponent<NavMeshObstacle>();
+        originalPosition = transform.localPosition;
 
         // Remake the block into the correct shape if asked
         if (generateShape)
@@ -47,10 +47,9 @@ public class Block : MonoBehaviour, Interactable {
 	void Update () {
         if (moving)
         {
-			flip.canFlip = false;
             transform.position = Vector3.Lerp(transform.position, targetPosition, moveSpeed * Time.deltaTime);
 
-            if(Vector3.Distance(transform.position, targetPosition) < .0001f)
+            if(Vector3.Distance(transform.position, targetPosition) < .01f)
             {
                 transform.position = targetPosition;
                 //Debug.Log("Moving complete");
@@ -150,7 +149,8 @@ public class Block : MonoBehaviour, Interactable {
         //moving = true;
         //Debug.Log(moving);
         //Debug.Log("Starting point: " + startPoint + ", target point: " + targetPosition);
-       
+        originalPosition = transform.localPosition;
+
     }
 
 
@@ -178,5 +178,11 @@ public class Block : MonoBehaviour, Interactable {
         RaycastHit hit;
         Vector3 direction = end - start;
         return !Physics.Raycast(start, direction, out hit, range);
+    }
+
+    public void ResetPosition()
+    {
+        moving = false;
+        transform.localPosition = originalPosition;
     }
 }

@@ -20,11 +20,11 @@ public class FlipScript : MonoBehaviour {
     private bool flipping = false;
     private bool faceUp = true;
     private bool halfway = false;
+    private bool endSignal = false;
     public float speed = 2f;
 
     public GameManager gameManager;
 
-	GameObject spell = null;
 	public bool canFlip = true;
 
 	// Use this for initialization
@@ -35,20 +35,11 @@ public class FlipScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		spell = GameObject.FindGameObjectWithTag ("Spell");
-		if (spell == null) {
-			canFlip = true;
-		} else {
-			canFlip = false;
-			//Invoke ("SetTrue", 6f);
-		}
-
-
 		if (canFlip) 
 		{
 			if (Input.GetKeyUp(KeyCode.F) && !flipping)
 			{
-				gameManager.flipStatus(!faceUp);
+				gameManager.StartFlip(!faceUp);
 				flipAngle = (flipAngle == 180) ? 0f : 180f;
 				targetRotation = Quaternion.AngleAxis(flipAngle, Vector3.left);
 				flipping = true;
@@ -65,6 +56,7 @@ public class FlipScript : MonoBehaviour {
             targetColor = (faceUp) ? bottomGround : topGround;
             //groundMat.color = Color.Lerp(groundMat.color, targetColor, 100 * speed * Time.deltaTime);
 
+            // The halway bool is used to swap the cameras
             if (!halfway && Quaternion.Angle(transform.rotation, targetRotation) < 130f)
             {
                 topCamera.gameObject.SetActive(!faceUp);
@@ -72,18 +64,24 @@ public class FlipScript : MonoBehaviour {
                 halfway = true;
             }
 
+            // The endSignal is used to renable the players nav mesh agents
+            if(!endSignal && Quaternion.Angle(transform.rotation, targetRotation) < 3f)
+            {
+                gameManager.EndFlip();
+                endSignal = true;
+            }
+
+            // This final check is used to finish the rotation and reset all other variables
             if(Quaternion.Angle(transform.rotation, targetRotation) < .2f)
             {
                 targetRotation = Quaternion.AngleAxis(flipAngle - .1f, Vector3.left);
                 transform.rotation = targetRotation;
                 flipping = false;
                 halfway = false;
-                faceUp = !faceUp;
+                endSignal = false;
+                faceUp = !faceUp;        
             }
         }
 
     }
-	void SetTrue() {
-		canFlip = true;
-	}
 }

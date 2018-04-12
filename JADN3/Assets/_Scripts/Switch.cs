@@ -7,17 +7,12 @@ public class Switch : MonoBehaviour, Interactable {
 
     public bool turnedOn = false;
 
-    private BoxCollider switchCollider;
     private Vector3 aimPosition;
 
     public FlipScript flip;
 
     // Use this for initialization
     void Start () {
-        flip = GameObject.Find("Levels").GetComponent<FlipScript>();
-        switchCollider = GetComponent<BoxCollider>();
-
-        aimPosition = switchCollider.center;
 	}
 	
 	// Update is called once per frame
@@ -27,7 +22,7 @@ public class Switch : MonoBehaviour, Interactable {
 
     public Vector3 GetSpellHitPoint()
     {
-        return transform.TransformPoint(aimPosition);
+        return transform.position;
     }
 
     public void OnSpellHit(Transform spell)
@@ -45,7 +40,7 @@ public class Switch : MonoBehaviour, Interactable {
         }
     }
 
-    void onTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Spell")
         {
