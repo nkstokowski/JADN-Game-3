@@ -54,6 +54,7 @@ public class Block : MonoBehaviour, Interactable {
                 transform.position = targetPosition;
                 //Debug.Log("Moving complete");
                 moving = false;
+                originalPosition = transform.localPosition;
             }
         }
 	}
@@ -149,7 +150,6 @@ public class Block : MonoBehaviour, Interactable {
         //moving = true;
         //Debug.Log(moving);
         //Debug.Log("Starting point: " + startPoint + ", target point: " + targetPosition);
-        originalPosition = transform.localPosition;
 
     }
 
