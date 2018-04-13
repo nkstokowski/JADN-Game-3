@@ -54,6 +54,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topPlayer: {fileID: 0}
   bottomPlayer: {fileID: 0}
+  playerPosition: {x: 0, y: 0, z: 0}
+  topPlayerPosition: {x: 0, y: 0, z: 0}
+  bottomPlayerPosition: {x: 0, y: 0, z: 0}
   flipper: {fileID: 0}
   faceUp: 0
 --- !u!114 &114813825362291272
