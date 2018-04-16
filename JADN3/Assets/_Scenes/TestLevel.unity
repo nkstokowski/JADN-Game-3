@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657892, g: 0.4964127, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -155,6 +155,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topPlayer: {fileID: 1900781372}
   bottomPlayer: {fileID: 1719849818}
+  playerPosition: {x: 0, y: 0, z: 0}
+  topPlayerPosition: {x: 0, y: 0, z: 0}
+  bottomPlayerPosition: {x: 0, y: 0, z: 0}
   flipper: {fileID: 1638232161}
   faceUp: 0
 --- !u!1 &262276909
@@ -378,7 +381,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 92a1a2b76e0813b4c80412d4374da862, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 250e27eb7552fb84f85bb1e29a5a6f3f, type: 2}
 --- !u!4 &868651047
 Transform:
   m_ObjectHideFlags: 0
@@ -765,7 +768,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 5a390663419e64e488389ef753d13854, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 5ce44446a31f0804396679957c3ec583, type: 2}
 --- !u!4 &1350011861
 Transform:
   m_ObjectHideFlags: 0
@@ -846,6 +849,7 @@ MonoBehaviour:
   groundMat: {fileID: 2100000, guid: 3f3eb11f68c607144aa56d9f83cd26c9, type: 2}
   speed: 0.5
   gameManager: {fileID: 209625335}
+  canFlip: 1
 --- !u!4 &1638232162
 Transform:
   m_ObjectHideFlags: 0
@@ -1152,7 +1156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 592216376}
   agent: {fileID: 1719849824}
-  iss: 0
+  rotationSpeed: 20
 --- !u!195 &1719849824
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1294,7 +1298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 906444439}
   agent: {fileID: 1900781375}
-  iss: 0
+  rotationSpeed: 20
 --- !u!195 &1900781375
 NavMeshAgent:
   m_ObjectHideFlags: 0
