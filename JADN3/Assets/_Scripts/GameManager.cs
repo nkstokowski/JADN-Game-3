@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
     private Block[] blocks;
     private NavMeshAgent topPlayerAgent;
     private NavMeshAgent bottomPlayerAgent;
+    private NavMeshAgent[] enemyAgents;
 
     ObjectPooling objectPooler;
 
@@ -24,6 +25,14 @@ public class GameManager : MonoBehaviour {
         blocks = FindObjectsOfType<Block>();
         topPlayerAgent = topPlayer.GetComponent<NavMeshAgent>();
         bottomPlayerAgent = bottomPlayer.GetComponent<NavMeshAgent>();
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        enemyAgents = new NavMeshAgent[enemies.Length];
+        int i = 0;
+        foreach(GameObject enemy in enemies)
+        {
+            enemyAgents[i] = enemy.GetComponent<NavMeshAgent>();
+            i++;
+        }
     }
 	
 	// Update is called once per frame
@@ -34,28 +43,33 @@ public class GameManager : MonoBehaviour {
     public void StartFlip(bool isTopShowing)
     {
         faceUp = isTopShowing;
-        //Debug.Log("Top Player: " + topPlayer.transform.position);
         topPlayerAgent.isStopped = true;
-        //topPlayer.GetComponent<NavMeshAgent>().velocity = Vector3.zero;
-        //bottomPlayer.GetComponent<NavMeshAgent>().velocity = Vector3.zero;
+
         bottomPlayerAgent.isStopped = true;
         DeactivateAll("Spell");
         foreach(Block b in blocks)
         {
             b.ResetPosition();
         }
-        topPlayerAgent.enabled = false;
-        bottomPlayerAgent.enabled = false;
-        //topPlayerPosition = topPlayer.transform.localPosition;
-        //bottomPlayerPosition = bottomPlayer.transform.localPosition;
+
+        // Disable all navmesh agents
+        SetAllAgents(false);
     }
 
     public void EndFlip()
     {
-        topPlayerAgent.enabled = true;
-        bottomPlayerAgent.enabled = true;
-        //bottomPlayer.transform.localPosition = bottomPlayerPosition;
-        //topPlayer.transform.localPosition = topPlayerPosition;
+        // Enable all navmesh agents
+        SetAllAgents(true);
+    }
+
+    public void SetAllAgents(bool enabledState)
+    {
+        topPlayerAgent.enabled = enabledState;
+        bottomPlayerAgent.enabled = enabledState;
+        foreach (NavMeshAgent enemy in enemyAgents)
+        {
+            enemy.enabled = enabledState;
+        }
     }
 
     public void DeactivateAll(string tag)
