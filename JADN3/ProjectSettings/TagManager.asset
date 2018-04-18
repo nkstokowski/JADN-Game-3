@@ -8,6 +8,7 @@ TagManager:
   - Spell
   - Interact
   - Wall
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - BottomLayer
   - TopBlock
   - BottomBlock
-  - 
+  - NavmeshIgnore
   - 
   - 
   - 

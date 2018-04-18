@@ -106,8 +106,6 @@ public class Block : MonoBehaviour, Interactable {
         // Distance to shoot a ray to check for collisions
         Vector3 startPoint = transform.position;
         Vector3 endPoint;
-        float movementCheckRange = moveDistance;
-        bool valid;
 
         // Set target position and ray range
         if (forward)
