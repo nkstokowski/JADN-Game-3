@@ -27,7 +27,8 @@ public class Spell : MonoBehaviour {
 	//If this hits something, add it back to the object pool
 	void OnTriggerEnter(Collider other)
 	{
-        objectPooler.ReQueue(this.gameObject, "Spell");
-
+        if(other.gameObject.tag != "Player"){
+            objectPooler.ReQueue(this.gameObject, "Spell");
+        }
     }
 }
