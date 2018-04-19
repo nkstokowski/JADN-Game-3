@@ -3,7 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+    public enum SwitchAction {
+        Move,
+        Create
+    }
+
 public class Switch : MonoBehaviour, Interactable {
+
+    public SwitchAction action;
 
     public bool turnedOn = false;
 

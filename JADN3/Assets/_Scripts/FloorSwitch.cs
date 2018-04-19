@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FloorSwitch : MonoBehaviour {
 
+    public SwitchAction action;
     public bool triggered = false;
 
 	// Use this for initialization

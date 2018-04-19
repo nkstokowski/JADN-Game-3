@@ -95,7 +95,7 @@ public class Block : MonoBehaviour, Interactable {
 
     public void OnSpellHit(Transform spell)
     {
-
+        Debug.Log("Im here! " + moving);
         // Figure out what direction the block should move
         Vector3 pos = transform.InverseTransformPoint(spell.position);
         bool forward = Vector3.Dot(pos, Vector3.back) > 0.5f && Vector3.Dot(spell.forward, transform.forward) > 0.5f;
