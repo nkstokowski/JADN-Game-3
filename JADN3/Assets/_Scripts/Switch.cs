@@ -5,14 +5,15 @@ using UnityEngine.AI;
 
     public enum SwitchAction {
         Move,
-        Create
+        Create,
+		Portal
     }
 
 public class Switch : MonoBehaviour, Interactable {
 
     public SwitchAction action;
 
-    public bool turnedOn = false;
+    public bool triggered = false;
 
     private Vector3 aimPosition;
 
@@ -34,15 +35,15 @@ public class Switch : MonoBehaviour, Interactable {
 
     public void OnSpellHit(Transform spell)
     {
-        if(turnedOn == false)
+		if(triggered == false)
         {
-            turnedOn = true;
+			triggered = true;
             print("turned on");
         }
 
-        else if(turnedOn == true)
+		else if(triggered == true)
         {
-            turnedOn = false;
+			triggered = false;
             print("turned off");
         }
     }

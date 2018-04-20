@@ -37,7 +37,7 @@ public class CustomBlock : MonoBehaviour {
 	void ListenForSwitchStatus() {
 		switch (type){
 			case SwitchType.Wall:
-				if(switchTrigger.GetComponent<Switch>().turnedOn){
+			if(switchTrigger.GetComponent<Switch>().triggered){
 					action = switchTrigger.GetComponent<Switch>().action;
 					SetTrigger(type);
 				}
@@ -55,7 +55,11 @@ public class CustomBlock : MonoBehaviour {
 	void SetTrigger(SwitchType type){
 		if(action == SwitchAction.Move){
 			Move();
-		} else {
+		}
+		else if (action == SwitchAction.Portal){
+			TurnOnPortal ();
+		}
+		else {
 			Create();
 		}
 	}
@@ -79,6 +83,11 @@ public class CustomBlock : MonoBehaviour {
 			block.transform.parent = bottomParent.transform;
 		}
 		Destroy(gameObject);
+	}
+
+	void TurnOnPortal()
+	{
+		transform.Find ("Portal").gameObject.SetActive (true);
 	}
 
 }
