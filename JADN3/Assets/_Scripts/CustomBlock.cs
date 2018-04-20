@@ -13,6 +13,7 @@ public class CustomBlock : MonoBehaviour {
 	public GameObject topParent;
 	public GameObject bottomParent;
 	public bool canActivateLoop = false;
+	public bool takeSwitchLayer = false;
 	public bool canActivate = true;
 	SwitchAction action;
 
@@ -32,6 +33,11 @@ public class CustomBlock : MonoBehaviour {
 	}
 	void Update() {
 		ListenForSwitchStatus();
+
+		if(action == SwitchAction.Move && transform.position == movePosition){
+			if(!canActivateLoop)
+				canActivate = false;
+		}
 	}
 
 	void ListenForSwitchStatus() {
@@ -63,20 +69,20 @@ public class CustomBlock : MonoBehaviour {
 	void Move(){
 		if(canActivate){
 			transform.position = Vector3.Lerp(transform.position, movePosition, moveSpeed * Time.deltaTime);
-			if(!canActivateLoop)
-				canActivate = false;
 		}
 	}
 
 	void Create(){
 		GameObject block = Instantiate(changeBlock, transform.position, transform.rotation);
 		block.transform.localScale = transform.localScale;
-		if(layer == LayerMask.NameToLayer("TopLayer")){
-			block.layer = 9;
-			block.transform.parent = topParent.transform;
-		} else {
-			block.layer = 8;
-			block.transform.parent = bottomParent.transform;
+		block.transform.parent = transform.parent;
+		if(takeSwitchLayer){
+			block.layer = switchTrigger.layer;
+			block.transform.parent = switchTrigger.transform.parent;
+		}
+		else {
+			block.layer = gameObject.layer;
+			block.transform.parent = transform.parent;
 		}
 		Destroy(gameObject);
 	}
