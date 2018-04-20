@@ -61,7 +61,11 @@ public class CustomBlock : MonoBehaviour {
 	void SetTrigger(SwitchType type){
 		if(action == SwitchAction.Move){
 			Move();
-		} else {
+		}
+		else if (action == SwitchAction.Portal){
+			TurnOnPortal ();
+		}
+		else {
 			Create();
 		}
 	}
@@ -85,6 +89,10 @@ public class CustomBlock : MonoBehaviour {
 			block.transform.parent = transform.parent;
 		}
 		Destroy(gameObject);
+	}
+
+	void TurnOnPortal(){
+		transform.Find ("Portal").gameObject.SetActive (true);
 	}
 
 }

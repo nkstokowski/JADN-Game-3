@@ -1,19 +1,32 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
-using System.Collections;
-
+using System.Collections.Generic;
 
 public class EnemyController : MonoBehaviour
 {
 
     public Transform[] points;
+    public Transform[] pointsTest;
     private int destPoint = 0;
     private NavMeshAgent agent;
+    public bool getPointsFromName = false;
+    public string pointsObjectName;
+    public int startingPointIndex = 0;
 
 
     void Start()
     {
+
+        if (getPointsFromName && pointsObjectName != "")
+        {
+            getPointsFromObject();
+        }
+
         agent = GetComponent<NavMeshAgent>();
+        if(startingPointIndex < points.Length)
+        {
+            destPoint = startingPointIndex;
+        }
 
         // Disabling auto-braking allows for continuous movement
         // between points (ie, the agent doesn't slow down as ita
@@ -21,6 +34,22 @@ public class EnemyController : MonoBehaviour
         agent.autoBraking = false;
 
         GotoNextPoint();
+    }
+
+    void getPointsFromObject()
+    {
+        GameObject pointsObject = GameObject.Find(pointsObjectName);
+
+        if (pointsObject)
+        {
+            List<Transform> allTransforms = new List<Transform>();
+            foreach(Transform t in pointsObject.GetComponentsInChildren<Transform>())
+            {
+                allTransforms.Add(t);
+            }
+            allTransforms.RemoveAt(0);
+            points = allTransforms.ToArray();
+        }
     }
 
 
