@@ -24,7 +24,7 @@ public class CustomBlock : MonoBehaviour {
 	SwitchType type;
 
 	void Start() {
-		if(switchTrigger.GetComponent<Switch>() != null) {
+		if (switchTrigger.GetComponent<Switch> () != null) {
 			type = SwitchType.Wall;
 		} else {
 			type = SwitchType.Floor;
@@ -63,7 +63,7 @@ public class CustomBlock : MonoBehaviour {
 	void Move(){
 		if(canActivate){
 			transform.position = Vector3.Lerp(transform.position, movePosition, moveSpeed * Time.deltaTime);
-			if(!canActivateLoop)
+			if (!canActivateLoop)
 				canActivate = false;
 		}
 	}
