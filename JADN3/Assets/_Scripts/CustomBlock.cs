@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AI;
+
 public class CustomBlock : MonoBehaviour {
 
 	public GameObject switchTrigger;
@@ -36,20 +41,20 @@ public class CustomBlock : MonoBehaviour {
 
 	void ListenForSwitchStatus() {
 		switch (type){
-			case SwitchType.Wall:
+		case SwitchType.Wall:
 			if(switchTrigger.GetComponent<Switch>().triggered){
-					action = switchTrigger.GetComponent<Switch>().action;
-					SetTrigger(type);
-				}
-				break;
-			case SwitchType.Floor:
-				if(switchTrigger.GetComponent<FloorSwitch>().triggered){
-					action = switchTrigger.GetComponent<FloorSwitch>().action;
-					SetTrigger(type);
-				}
-				break;
-			default:
-				break;
+				action = switchTrigger.GetComponent<Switch>().action;
+				SetTrigger(type);
+			}
+			break;
+		case SwitchType.Floor:
+			if(switchTrigger.GetComponent<FloorSwitch>().triggered){
+				action = switchTrigger.GetComponent<FloorSwitch>().action;
+				SetTrigger(type);
+			}
+			break;
+		default:
+			break;
 		}
 	}
 	void SetTrigger(SwitchType type){
