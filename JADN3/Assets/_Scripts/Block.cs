@@ -16,7 +16,7 @@ public class Block : MonoBehaviour, Interactable {
     public float moveDistance = 1f;
 
     private bool moving;
-    private Vector3 targetPosition;
+    public Vector3 targetPosition;
     public Vector3 originalPosition;
     private BoxCollider myCollider;
     private NavMeshObstacle myObstacle;
@@ -182,5 +182,9 @@ public class Block : MonoBehaviour, Interactable {
     {
         moving = false;
         transform.localPosition = originalPosition;
+    }
+
+    public void SetTargetPosition(Vector3 newPosition){
+        targetPosition = newPosition;
     }
 }

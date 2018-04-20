@@ -22,9 +22,16 @@ public class Portal : MonoBehaviour {
 	public void Teleport(GameObject obj) {
 		obj.transform.position = spawnLocation.transform.position;
 		obj.layer = spawnLocation.layer;
+		for(int i=0;i<obj.transform.childCount;i++){
+			obj.transform.GetChild(i).gameObject.layer = spawnLocation.layer;
+		}
 
 		if(obj.tag == "Player"){
 			obj.GetComponent<NavMeshAgent>().enabled = true;
+		}
+		else if(obj.tag == "Interact"){
+			Block block = obj.GetComponent<Block>();
+			block.SetTargetPosition(spawnLocation.transform.position);
 		}
 	}
 
