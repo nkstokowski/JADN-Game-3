@@ -5,6 +5,10 @@ using UnityEngine.AI;
 
 public class Block : MonoBehaviour, Interactable {
 
+    public enum BlockLayer { Top = 10, Bottom = 11 };
+    [Header("Layer")]
+    public BlockLayer currentLayer = BlockLayer.Top;
+
     [Header("Size and Shape")]
     public int blockWidth = 1;
     public int blockLength = 1;
@@ -16,8 +20,8 @@ public class Block : MonoBehaviour, Interactable {
     public float moveDistance = 1f;
 
     private bool moving;
-    public Vector3 targetPosition;
-    public Vector3 originalPosition;
+    private Vector3 targetPosition;
+    private Vector3 originalPosition;
     private BoxCollider myCollider;
     private NavMeshObstacle myObstacle;
     private Vector3 aimPosition;
@@ -95,7 +99,6 @@ public class Block : MonoBehaviour, Interactable {
 
     public void OnSpellHit(Transform spell)
     {
-        Debug.Log("Im here! " + moving);
         // Figure out what direction the block should move
         Vector3 pos = transform.InverseTransformPoint(spell.position);
         bool forward = Vector3.Dot(pos, Vector3.back) > 0.5f && Vector3.Dot(spell.forward, transform.forward) > 0.5f;
@@ -145,10 +148,6 @@ public class Block : MonoBehaviour, Interactable {
             Debug.Log("No movement direction found in Block.cs - OnSpellHit()");
         }
 
-        //moving = true;
-        //Debug.Log(moving);
-        //Debug.Log("Starting point: " + startPoint + ", target point: " + targetPosition);
-
     }
 
 
@@ -175,7 +174,14 @@ public class Block : MonoBehaviour, Interactable {
     {
         RaycastHit hit;
         Vector3 direction = end - start;
-        return !Physics.Raycast(start, direction, out hit, range);
+        if (Physics.Raycast(start, direction, out hit, range))
+        {
+            return (hit.transform.tag == "Portal" || hit.transform.tag == "FloorSwitch");
+        }
+        else
+        {
+            return true;
+        }
     }
 
     public void ResetPosition()
@@ -187,4 +193,31 @@ public class Block : MonoBehaviour, Interactable {
     public void SetTargetPosition(Vector3 newPosition){
         targetPosition = newPosition;
     }
+
+    public void TeleportBlock(Vector3 pos, bool swapLayer)
+    {
+        targetPosition = pos;
+        originalPosition = pos;
+        if (swapLayer)
+        {
+            SwapBlockLayer();
+        }
+    }
+
+    public void SwapBlockLayer()
+    {
+        // Get the opposite of the current layer, as an int
+        int layerSet = (currentLayer == BlockLayer.Top) ? (int)BlockLayer.Bottom : (int)BlockLayer.Top;
+
+        // Set object and children to new layer
+        foreach (Transform t in GetComponentInChildren<Transform>())
+        {
+            t.gameObject.layer = layerSet;
+        }
+
+        // Update currentlayer var
+        currentLayer = (BlockLayer)layerSet;
+
+    }
+
 }

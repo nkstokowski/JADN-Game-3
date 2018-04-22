@@ -43,7 +43,8 @@ public class CustomBlock : MonoBehaviour {
 	void ListenForSwitchStatus() {
 		switch (type){
 			case SwitchType.Wall:
-				if(switchTrigger.GetComponent<Switch>().turnedOn){
+				if(switchTrigger.GetComponent<Switch>().triggered)
+                {
 					action = switchTrigger.GetComponent<Switch>().action;
 					SetTrigger(type);
 				}
