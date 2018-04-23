@@ -153,8 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2777bba7e4e7c6f4681e3ea77eef5438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Size: {x: 4, y: 5.690579, z: 4}
-  m_Center: {x: 0, y: 1.857466, z: 0}
+  m_Size: {x: 4, y: 9, z: 4}
+  m_Center: {x: 0, y: 3.48, z: 0}
   m_Area: 3
   m_AffectedAgents: ffffffff
 --- !u!1 &16486280
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -373,7 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -547,7 +547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -634,7 +634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -721,7 +721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -808,7 +808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -895,7 +895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -940,12 +940,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 197426692}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &209625335 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114612749125748286, guid: 673f49b90f68e48e19f1d91336ff1645,
-    type: 2}
-  m_PrefabInternal: {fileID: 964011125}
-  m_Script: {fileID: 11500000, guid: f5bc119c5119d6249b55ed9979599cdb, type: 3}
 --- !u!1 &262276909
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,7 +1052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -1145,7 +1139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -1208,6 +1202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pausedText: {fileID: 0}
   menuText: {fileID: 0}
+  resetText: {fileID: 0}
 --- !u!1 &300557810
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,7 +1245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -1337,7 +1332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -1424,7 +1419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -1702,7 +1697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -1844,7 +1839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -2366,7 +2361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -2453,7 +2448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -2626,7 +2621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -2789,7 +2784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -2881,7 +2876,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -2968,7 +2963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -3096,7 +3091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -3253,7 +3248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -3340,7 +3335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -3432,13 +3427,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3df27b9289d1e8c4fb82e0df4f4673ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AgentTypeID: -334000983
+  m_AgentTypeID: 0
   m_CollectObjects: 0
   m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4294959871
+    m_Bits: 4294967295
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
@@ -3448,7 +3443,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 4431f07c7b71e22438b47ea8463d14d5, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &868651047
 Transform:
   m_ObjectHideFlags: 0
@@ -3609,7 +3604,7 @@ Prefab:
     - target: {fileID: 114738459822465902, guid: 885dc10dc7bc847ffafa5c2a928784a3,
         type: 2}
       propertyPath: targetObjects.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4543203917011902, guid: 885dc10dc7bc847ffafa5c2a928784a3, type: 2}
       propertyPath: m_LocalPosition.x
@@ -3909,7 +3904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -4430,7 +4425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -4517,7 +4512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -4604,7 +4599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -4691,7 +4686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -4864,7 +4859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -4949,8 +4944,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2777bba7e4e7c6f4681e3ea77eef5438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Size: {x: 4, y: 5.690579, z: 4}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 4, y: 9, z: 4}
+  m_Center: {x: 0, y: 3.48, z: 0}
   m_Area: 3
   m_AffectedAgents: ffffffff
 --- !u!1 &1046183753
@@ -4995,7 +4990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -5185,7 +5180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -5272,7 +5267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -5364,7 +5359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -5506,57 +5501,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 4899938886603766, guid: e8088b27ec56146c4aed5bbd18af00bd, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4899938886603766, guid: e8088b27ec56146c4aed5bbd18af00bd, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4899938886603766, guid: e8088b27ec56146c4aed5bbd18af00bd, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4899938886603766, guid: e8088b27ec56146c4aed5bbd18af00bd, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114646465830258122, guid: e8088b27ec56146c4aed5bbd18af00bd,
-        type: 2}
-      propertyPath: customBlockType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114646465830258122, guid: e8088b27ec56146c4aed5bbd18af00bd,
-        type: 2}
-      propertyPath: startPosition.x
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114646465830258122, guid: e8088b27ec56146c4aed5bbd18af00bd,
-        type: 2}
-      propertyPath: startPosition.z
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114646465830258122, guid: e8088b27ec56146c4aed5bbd18af00bd,
-        type: 2}
-      propertyPath: endPosition.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114646465830258122, guid: e8088b27ec56146c4aed5bbd18af00bd,
-        type: 2}
-      propertyPath: endPosition.z
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114646465830258122, guid: e8088b27ec56146c4aed5bbd18af00bd,
-        type: 2}
-      propertyPath: newBlockObject
-      value: 
-      objectReference: {fileID: 1033286835017404, guid: b70ad98a94375f841b8bc4e56770dc62,
-        type: 2}
-    - target: {fileID: 1044120345471580, guid: e8088b27ec56146c4aed5bbd18af00bd, type: 2}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e8088b27ec56146c4aed5bbd18af00bd, type: 2}
   m_IsPrefabParent: 0
@@ -5612,7 +5556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -5699,7 +5643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -5786,7 +5730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -5873,7 +5817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -5960,7 +5904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -6052,7 +5996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -6139,7 +6083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -6314,7 +6258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -6433,7 +6377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -6571,7 +6515,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4294959615
+    m_Bits: 4294960639
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
@@ -6581,7 +6525,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: d03383e97485b644fa2a2b9c1981c091, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: c649a4e37f7d0fb4a9e88aedde4e2c1b, type: 2}
 --- !u!4 &1350011861
 Transform:
   m_ObjectHideFlags: 0
@@ -6637,7 +6581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -6724,7 +6668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -6811,7 +6755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -6898,7 +6842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -7015,7 +6959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -7102,7 +7046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -7189,7 +7133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -7276,7 +7220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -7361,8 +7305,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2777bba7e4e7c6f4681e3ea77eef5438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Size: {x: 4, y: 5.690579, z: 4.126041}
-  m_Center: {x: 0, y: 2.3452895, z: -0.063020706}
+  m_Size: {x: 4, y: 9, z: 4}
+  m_Center: {x: 0, y: 3.48, z: 0}
   m_Area: 3
   m_AffectedAgents: ffffffff
 --- !u!1 &1588349178
@@ -7407,7 +7351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -7494,7 +7438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -7682,15 +7626,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0ae799f18407e248bc702a185a2fccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topCamera: {fileID: 906444439}
-  bottomCamera: {fileID: 592216376}
-  topBackground: {r: 0.050980397, g: 0.8588236, b: 0.7960785, a: 0}
-  bottomBackground: {r: 0.64705884, g: 0.60571533, b: 0.4329585, a: 0}
-  topGround: {r: 0.6116422, g: 0.6838235, b: 0.49275517, a: 1e-45}
-  bottomGround: {r: 0.7447515, g: 0.75, b: 0.3694853, a: 0}
-  groundMat: {fileID: 2100000, guid: 3f3eb11f68c607144aa56d9f83cd26c9, type: 2}
-  speed: 0.5
-  gameManager: {fileID: 209625335}
+  topCamera: {fileID: 0}
+  bottomCamera: {fileID: 0}
+  topBackground: {r: 0, g: 0, b: 0, a: 0}
+  bottomBackground: {r: 0, g: 0, b: 0, a: 0}
+  topGround: {r: 0, g: 0, b: 0, a: 0}
+  bottomGround: {r: 0, g: 0, b: 0, a: 0}
+  groundMat: {fileID: 0}
+  speed: 2
+  flipButton: {fileID: 0}
+  toBottomImage: {fileID: 0}
+  toTopImage: {fileID: 0}
+  gameManager: {fileID: 0}
   canFlip: 1
 --- !u!4 &1638232162
 Transform:
@@ -7748,8 +7695,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2777bba7e4e7c6f4681e3ea77eef5438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Size: {x: 4, y: 5.690579, z: 4}
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Size: {x: 4, y: 9, z: 4}
+  m_Center: {x: 0, y: 3.48, z: 0}
   m_Area: 3
   m_AffectedAgents: ffffffff
 --- !u!1 &1663365195
@@ -7794,7 +7741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -7881,7 +7828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -7968,7 +7915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -8055,7 +8002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -8165,8 +8112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchType: 0
   switchOn: 0
-  targetObjects:
-  - {fileID: 1150273347}
+  targetObjects: []
 --- !u!4 &1734147214
 Transform:
   m_ObjectHideFlags: 0
@@ -8219,8 +8165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
-  m_Area: 1
+  m_OverrideArea: 0
+  m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
 --- !u!1 &1745349705
@@ -8299,7 +8245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -8386,7 +8332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -8473,7 +8419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -8612,7 +8558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -8699,7 +8645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -8796,7 +8742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -9020,7 +8966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -9107,7 +9053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -9194,7 +9140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -9559,7 +9505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -9646,7 +9592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -9870,7 +9816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d07ce676d7afda4dabb3b0f7dd5e654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 1
+  m_OverrideArea: 0
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
