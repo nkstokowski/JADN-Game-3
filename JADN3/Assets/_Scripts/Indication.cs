@@ -8,7 +8,7 @@ public class Indication : MonoBehaviour {
 	public GameObject flipObject;
 	public GameObject flipButton;
 	public AnimationClip flashAnimation;
-	private bool isFlashing = false;
+	public bool isFlashing = false;
 
 	public void Flip(){
 		flipObject.GetComponent<FlipScript>().TriggerFlip();
@@ -25,5 +25,12 @@ public class Indication : MonoBehaviour {
 
 	public void TriggerNotification(){
 		isFlashing = !isFlashing;
+	}
+
+	public bool GetIsFlashing(){
+		return isFlashing;
+	}
+	public void SetFlashing(bool newFlash){
+		isFlashing = newFlash;
 	}
 }

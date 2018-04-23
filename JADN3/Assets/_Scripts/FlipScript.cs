@@ -30,6 +30,7 @@ public class FlipScript : MonoBehaviour {
 	private bool dimension;	//True == showToTop | false == showToBottom
 
     public GameManager gameManager;
+    public Indication indication;
 
 	public bool canFlip = true;
 
@@ -95,6 +96,7 @@ public class FlipScript : MonoBehaviour {
         flipping = true;
         dimension = !dimension;
         SetDimensionButton();
+        indication.SetFlashing(false);
         }
     }
 
