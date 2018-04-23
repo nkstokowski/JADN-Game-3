@@ -2,33 +2,39 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FloorSwitch : MonoBehaviour {
+public class FloorSwitch : Switch {
 
-    public SwitchAction action;
-    public bool triggered = false;
+    void Start()
+    {
+        BuildTargetList();
+    }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update () {
 
 	}
 
+    // Turn switch on when something enters 
     private void OnTriggerEnter(Collider other)
     {
         if(other.name != "Ground")
         {
-            triggered = true;
+            switchOn = true;
+
+            TurnOn();
+
         }
     }
+
+    // Turn switch off when something leaves
     private void OnTriggerExit(Collider other)
     {
         if (other.name != "Ground")
         {
-            triggered = false;
+            switchOn = false;
+
+            TurnOff();
+
         }
     }
 }

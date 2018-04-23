@@ -38,6 +38,10 @@ public class Block : MonoBehaviour, Interactable {
         {
             GenerateShape();
         }
+        else
+        {
+            SetBlockLayer((int)currentLayer);
+        }
 
         // Setup the collider, navmesh obstacle, and aim position
         myCollider.size = new Vector3(blockLength, 1, blockWidth);
@@ -63,6 +67,18 @@ public class Block : MonoBehaviour, Interactable {
         }
 	}
 
+    public void SetBlockLayer(int layerSet)
+    {
+        // Set object and children to new layer
+        foreach (Transform t in transform)
+        {
+            t.gameObject.layer = layerSet;
+        }
+
+        // Update currentlayer var
+        currentLayer = (BlockLayer)layerSet;
+    }
+
     private void GenerateShape()
     {
         // Delete all child blocks
@@ -78,19 +94,10 @@ public class Block : MonoBehaviour, Interactable {
             {
                 GameObject block = Instantiate(blockPrefab, transform.position, transform.rotation, transform);
                 block.transform.localPosition = new Vector3(i, 0, j);
+                block.layer = (int) currentLayer;
             }
         }
     }
-
-    void OnTriggerEnter(Collider other)
-	{
-		if (other.tag == "Spell" && !moving) {
-            OnSpellHit(other.transform);
-		} /*else if(other.tag == "Wall")
-        {
-            moving = false;
-        }*/
-	}
 
     public Vector3 GetSpellHitPoint()
     {

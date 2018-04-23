@@ -69,6 +69,7 @@ public class PlayerController : MonoBehaviour {
         //Debug.Log("Starting Rotation");
         agent.isStopped = true;
         agent.velocity = Vector3.zero;
+
         // Rotate to transform
         Interactable obj = target.GetComponent<Interactable>();
         Vector3 targetAimPoint = obj.GetSpellHitPoint();

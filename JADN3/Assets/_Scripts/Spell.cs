@@ -28,6 +28,11 @@ public class Spell : MonoBehaviour {
 	void OnTriggerEnter(Collider other)
 	{
         if(other.gameObject.tag != "Player"){
+            Interactable target = other.gameObject.GetComponent<Interactable>();
+            if((Component)target)
+            {
+                target.OnSpellHit(transform);
+            }
             objectPooler.ReQueue(this.gameObject, "Spell");
         }
     }

@@ -1,99 +1,109 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class CustomBlock : MonoBehaviour {
+// Switch type - 
+//      MoveOnce:     The block will move from start position to end position.
+//                    Will only initiate move once, and only occurs when the 
+//                    block receives an ON signal
+//
+//      MoveTrack:    The block will move on a track. On an ON signal it will
+//                    start moving toward the end position. On an OFF signal
+//                    it will start moving toward the start position.
+//
+//      MoveLoop:     NOT IMPLEMENTED. The block, while active, will move back
+//                    and forth between the start and end positions. An ON signal
+//                    will turn this movement on, and an OFF signal will turn
+//                    this movement off. 
+//
+//      Transforming: When this block receives an ON, OFF, or TRIGGER signal
+//                    it will instantiate a new instance of the specified
+//                    New Block Object. It will set the layer of the block
+//                    equal to this one and then destroy itself.
+public enum BlockType
+{
+    MoveOnce,
+    MoveTrack,
+    MoveLoop,
+    Transforming
+}
 
-	public GameObject switchTrigger;
-	public Vector3 movePosition;
-	public float moveSpeed = 5.0f;
-	public GameObject changeBlock;
-	public LayerMask layer;
-	public GameObject topParent;
-	public GameObject bottomParent;
-	public bool canActivateLoop = false;
-	public bool takeSwitchLayer = false;
-	public bool canActivate = true;
-	SwitchAction action;
+public class CustomBlock : MonoBehaviour, SwitchTarget
+{
+    // This Blocks type
+    public BlockType customBlockType;
+
+    [Header("Movement")]
+    public Vector3 startPosition;
+    public Vector3 endPosition;
+    public float moveSpeed = 5.0f;
+    private bool movingForward;
+
+    [Header("Transformation")]
+    public GameObject newBlockObject;
 
 
-	enum SwitchType {
-		Wall,
-		Floor
-	}
-	SwitchType type;
+    void Start()
+    {
+        // Set start position in case you forget to
+        startPosition = transform.localPosition;
+    }
 
-	void Start() {
-		if(switchTrigger.GetComponent<Switch>() != null) {
-			type = SwitchType.Wall;
-		} else {
-			type = SwitchType.Floor;
-		}
-	}
-	void Update() {
-		ListenForSwitchStatus();
+    void Update()
+    {
+        // Always move towards the current target position
+        Vector3 targetPosition = (movingForward) ? endPosition : startPosition;
+        transform.localPosition = Vector3.MoveTowards(transform.localPosition, targetPosition, moveSpeed * Time.deltaTime);
+    }
 
-		if(action == SwitchAction.Move && transform.position == movePosition){
-			if(!canActivateLoop)
-				canActivate = false;
-		}
-	}
+    // Spawns a new block from a prefab. Block moves to this block and layer.
+    // Destroys self.
+    private void CreateBlock()
+    {
+        GameObject block = Instantiate(newBlockObject, transform.position, transform.rotation);
+        block.transform.parent = transform.parent;
+        block.GetComponent<Block>().SetBlockLayer(gameObject.layer);
+        Destroy(gameObject);
+    }
 
-	void ListenForSwitchStatus() {
-		switch (type){
-			case SwitchType.Wall:
-				if(switchTrigger.GetComponent<Switch>().triggered)
-                {
-					action = switchTrigger.GetComponent<Switch>().action;
-					SetTrigger(type);
-				}
-				break;
-			case SwitchType.Floor:
-				if(switchTrigger.GetComponent<FloorSwitch>().triggered){
-					action = switchTrigger.GetComponent<FloorSwitch>().action;
-					SetTrigger(type);
-				}
-				break;
-			default:
-				break;
-		}
-	}
-	void SetTrigger(SwitchType type){
-		if(action == SwitchAction.Move){
-			Move();
-		}
-		else if (action == SwitchAction.Portal){
-			TurnOnPortal ();
-		}
-		else {
-			Create();
-		}
-	}
+    // Receive the signal that the switch was turned on
+    public void HandleSwitchOn()
+    {
+        switch (customBlockType)
+        {
+            case BlockType.Transforming:
+                CreateBlock();
+                break;
+            case BlockType.MoveTrack:
+            case BlockType.MoveOnce:
+                movingForward = true;
+                break;
+        }
+    }
 
-	void Move(){
-		if(canActivate){
-			transform.position = Vector3.Lerp(transform.position, movePosition, moveSpeed * Time.deltaTime);
-		}
-	}
+    // Receive the signal that the switch was turned off
+    public void HandleSwitchOff()
+    {
+        switch (customBlockType)
+        {
+            case BlockType.Transforming:
+                CreateBlock();
+                break;
+            case BlockType.MoveTrack:
+                movingForward = false;
+                break;
+        }
+    }
 
-	void Create(){
-		GameObject block = Instantiate(changeBlock, transform.position, transform.rotation);
-		block.transform.localScale = transform.localScale;
-		block.transform.parent = transform.parent;
-		if(takeSwitchLayer){
-			block.layer = switchTrigger.layer;
-			block.transform.parent = switchTrigger.transform.parent;
-		}
-		else {
-			block.layer = gameObject.layer;
-			block.transform.parent = transform.parent;
-		}
-		Destroy(gameObject);
-	}
-
-	void TurnOnPortal(){
-		transform.Find ("Portal").gameObject.SetActive (true);
-	}
+    // Receive the signal that the switch was triggered
+    public void HandleSwitchTrigger()
+    {
+        switch (customBlockType)
+        {
+            case BlockType.Transforming:
+                CreateBlock();
+                break;
+        }
+    }
 
 }

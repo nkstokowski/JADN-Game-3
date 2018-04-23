@@ -1,58 +1,128 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-    public enum SwitchAction {
-        Move,
-        Create,
-		Portal
-    }
+// Switch type - 
+//      Switch: The switch flips from on to off on each hit
+//      Button: The switch sends out the same signal on each hit
+public enum SwitchType
+{
+    Switch,
+    Button
+}
 
-public class Switch : MonoBehaviour, Interactable {
+public class Switch : MonoBehaviour{
 
-    public SwitchAction action;
+    // Whether this switch acts like a switch or a button
+    public SwitchType switchType = SwitchType.Switch;
+    // Whether or not this switch is on
+    public bool switchOn = false;
+    // The list of game objects this switch will send a signal to
+    public List<GameObject> targetObjects; 
 
-    public bool triggered = false;
+    // The list of SwitchTarget components to send signals to
+    protected List<SwitchTarget> targets; 
 
-    private Vector3 aimPosition;
 
-    public FlipScript flip;
-
-    // Use this for initialization
-    void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
-    }
-
-    public Vector3 GetSpellHitPoint()
+    // Build the list of targets to send signals to
+    public void BuildTargetList()
     {
-        return transform.position;
-    }
+        // Clear the old list
+        targets = new List<SwitchTarget>();
+        SwitchTarget st;
 
-    public void OnSpellHit(Transform spell)
-    {
-		if(triggered == false)
-        {
-			triggered = true;
-            print("turned on");
-        }
+        // Remove any objects that were destroyed
+        targetObjects.RemoveAll(obj => obj == null);
 
-		else if(triggered == true)
+        // Build the new list
+        foreach (GameObject obj in targetObjects)
         {
-			triggered = false;
-            print("turned off");
+            st = obj.GetComponent<SwitchTarget>();
+            if ((Component)st)
+            {
+                targets.Add(st);
+            }
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    public void AddSwitchTarget(GameObject obj)
     {
-        if(other.tag == "Spell")
+        targetObjects.Add(obj);
+        BuildTargetList();
+    }
+
+    public void RemoveSwitchTarget(GameObject obj)
+    {
+        targetObjects.Remove(obj);
+        BuildTargetList();
+    }
+
+    // Send the turn on signal to all targets
+    protected void TurnOn()
+    {
+        bool recalcList = false;
+
+        foreach(SwitchTarget target in targets)
         {
-            OnSpellHit(other.transform);
+            if ((Component)target!= null)
+            {
+                target.HandleSwitchOn();
+            }
+            else
+            {
+                recalcList = true;
+            }
+        }
+
+        if (recalcList)
+        {
+            BuildTargetList();
         }
     }
+
+    // Send the turn off signal to all targets
+    protected void TurnOff()
+    {
+        bool recalcList = false;
+
+        foreach (SwitchTarget target in targets)
+        {
+            if ((Component)target != null)
+            {
+                target.HandleSwitchOff();
+            }
+            else
+            {
+                recalcList = true;
+            }
+        }
+
+        if (recalcList)
+        {
+            BuildTargetList();
+        }
+    }
+
+    // Send the trigger signal to all targets
+    protected void Trigger()
+    {
+        bool recalcList = false;
+
+        foreach (SwitchTarget target in targets)
+        {
+            if ((Component)target != null)
+            {
+                target.HandleSwitchTrigger();
+            }
+            else
+            {
+                recalcList = true;
+            }
+        }
+
+        if (recalcList)
+        {
+            BuildTargetList();
+        }
+    }
+
 }
