@@ -9,6 +9,8 @@ TagManager:
   - Interact
   - Wall
   - Enemy
+  - FloorSwitch
+  - Portal
   layers:
   - Default
   - TransparentFX

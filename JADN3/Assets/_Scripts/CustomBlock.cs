@@ -70,8 +70,6 @@ public class CustomBlock : MonoBehaviour, SwitchTarget
     // Receive the signal that the switch was turned on
     public void HandleSwitchOn()
     {
-        Debug.Log("In on");
-        
         switch (customBlockType)
         {
             case BlockType.Transforming:
@@ -87,7 +85,6 @@ public class CustomBlock : MonoBehaviour, SwitchTarget
     // Receive the signal that the switch was turned off
     public void HandleSwitchOff()
     {
-        Debug.Log("In off");
         switch (customBlockType)
         {
             case BlockType.Transforming:
@@ -102,7 +99,6 @@ public class CustomBlock : MonoBehaviour, SwitchTarget
     // Receive the signal that the switch was triggered
     public void HandleSwitchTrigger()
     {
-        Debug.Log("In trigger");
         switch (customBlockType)
         {
             case BlockType.Transforming:

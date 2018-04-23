@@ -19,7 +19,6 @@ public class FloorSwitch : Switch {
     {
         if(other.name != "Ground")
         {
-            Debug.Log("GPOIHGPOIHGOIHGOIHG");
             switchOn = true;
 
             TurnOn();

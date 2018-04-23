@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4505009051035038}
   - component: {fileID: 114612749125748286}
   - component: {fileID: 114813825362291272}
+  - component: {fileID: 114800897425822564}
+  - component: {fileID: 114338456973504162}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -41,6 +43,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114338456973504162
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1320873785692170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e28002b73c854d9fa24951df972dd1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flipObject: {fileID: 0}
+  flipButton: {fileID: 0}
+  flashAnimation: {fileID: 7400000, guid: be317f1b040d84790914df18be7f7450, type: 2}
+  isFlashing: 0
 --- !u!114 &114612749125748286
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -59,6 +76,20 @@ MonoBehaviour:
   bottomPlayerPosition: {x: 0, y: 0, z: 0}
   flipper: {fileID: 0}
   faceUp: 0
+--- !u!114 &114800897425822564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1320873785692170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39254ee5b796b4797851c604b64bd49b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pausedText: {fileID: 0}
+  menuText: {fileID: 0}
+  resetText: {fileID: 0}
 --- !u!114 &114813825362291272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -72,5 +103,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pools:
   - tag: Spell
-    prefab: {fileID: 1984434153450228, guid: 72a94b6e91bdcd04fad3b8bc81f9ab6f, type: 2}
+    prefab: {fileID: 1977104972982520, guid: 0e1d540a88c35c548b68bc454abc3fbb, type: 2}
     size: 3
