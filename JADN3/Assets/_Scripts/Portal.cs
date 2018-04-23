@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Portal : MonoBehaviour {
+public class Portal : MonoBehaviour, SwitchTarget {
 
 	public GameObject spawnLocation;
 	public bool canSendPlayer = false;
     public bool sendsAcrossLayer = true;
+    public bool portalActive = true;
+    public bool canTurnOff = false;
 
     void OnTriggerEnter(Collider other) {
+        if (!portalActive) return;
+
 		if(other.gameObject.tag == "Player" && !canSendPlayer) return;
 
 		if(other.gameObject.tag == "Player" && canSendPlayer) {
@@ -36,6 +40,24 @@ public class Portal : MonoBehaviour {
                 blockScript.TeleportBlock(obj.transform.position, sendsAcrossLayer);
             }
         }
+    }
+
+    public void HandleSwitchOn()
+    {
+        portalActive = true;
+    }
+
+    public void HandleSwitchOff()
+    {
+        if (canTurnOff)
+        {
+            portalActive = false;
+        }
+    }
+
+    public void HandleSwitchTrigger()
+    {
+
     }
 
 }

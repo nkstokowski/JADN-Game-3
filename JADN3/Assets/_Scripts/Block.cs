@@ -127,6 +127,7 @@ public class Block : MonoBehaviour, Interactable {
         if (moving)
         {
             targetPosition += hitDirection;
+            return;
         }
         SetHitDirection(spell);
         // Distance to shoot a ray to check for collisions
