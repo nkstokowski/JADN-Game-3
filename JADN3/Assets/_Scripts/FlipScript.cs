@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FlipScript : MonoBehaviour {
 
@@ -23,6 +24,11 @@ public class FlipScript : MonoBehaviour {
     private bool endSignal = false;
     public float speed = 2f;
 
+	public GameObject flipButton;
+	public Sprite toBottomImage;
+	public Sprite toTopImage;
+	private bool dimension;	//True == showToTop | false == showToBottom
+
     public GameManager gameManager;
 
 	public bool canFlip = true;
@@ -31,21 +37,18 @@ public class FlipScript : MonoBehaviour {
 	void Start () {
         targetRotation = transform.rotation;
         gameManager.faceUp = faceUp;
+        flipButton.GetComponent<Image>().sprite = toBottomImage;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (canFlip) 
 		{
-			if (Input.GetKeyUp(KeyCode.F) && !flipping)
+			if (Input.GetKeyUp(KeyCode.F))
 			{
-				gameManager.StartFlip(!faceUp);
-				flipAngle = (flipAngle == 180) ? 0f : 180f;
-				targetRotation = Quaternion.AngleAxis(flipAngle, Vector3.left);
-				flipping = true;
+                TriggerFlip();
 			}
 		}
-        
 
         if (flipping)
         {
@@ -83,5 +86,22 @@ public class FlipScript : MonoBehaviour {
             }
         }
 
+    }
+    public void TriggerFlip(){
+        if (!flipping){
+        gameManager.StartFlip(!faceUp);
+        flipAngle = (flipAngle == 180) ? 0f : 180f;
+        targetRotation = Quaternion.AngleAxis(flipAngle, Vector3.left);
+        flipping = true;
+        dimension = !dimension;
+        SetDimensionButton();
+        }
+    }
+
+     void SetDimensionButton(){
+        if(dimension)
+        	flipButton.GetComponent<Image>().sprite = toTopImage;
+		else
+			flipButton.GetComponent<Image>().sprite = toBottomImage;
     }
 }
