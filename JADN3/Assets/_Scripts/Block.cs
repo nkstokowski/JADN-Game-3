@@ -22,6 +22,7 @@ public class Block : MonoBehaviour, Interactable {
     private bool moving;
     private Vector3 targetPosition;
     private Vector3 originalPosition;
+    private Vector3 hitDirection;
     private BoxCollider myCollider;
     private NavMeshObstacle myObstacle;
     private Vector3 aimPosition;
@@ -86,11 +87,28 @@ public class Block : MonoBehaviour, Interactable {
 	{
 		if (other.tag == "Spell" && !moving) {
             OnSpellHit(other.transform);
-		} /*else if(other.tag == "Wall")
-        {
-            moving = false;
-        }*/
+		}
+        else if(other.tag == "Spell" && moving){
+            targetPosition += hitDirection;
+        }
 	}
+
+    public void SetHitDirection(Transform spell){
+        // Figure out what direction the block should move
+        Vector3 pos = transform.InverseTransformPoint(spell.position);
+        bool forward = Vector3.Dot(pos, Vector3.back) > 0.5f && Vector3.Dot(spell.forward, transform.forward) > 0.5f;
+        bool back = Vector3.Dot(pos, Vector3.forward) > 0.5f && Vector3.Dot(spell.forward, -transform.forward) > 0.5f;
+        bool left = Vector3.Dot(pos, Vector3.right) > 0.5f && Vector3.Dot(spell.forward, -transform.right) > 0.5f;
+        bool right = Vector3.Dot(pos, Vector3.left) > 0.5f && Vector3.Dot(spell.forward, transform.right) > 0.5f;
+        if (forward)
+            hitDirection = transform.forward;
+        else if (back)
+            hitDirection = -transform.forward;
+        else if (left)
+            hitDirection = -transform.right;
+        else if (right)
+            hitDirection = transform.right;
+    }
 
     public Vector3 GetSpellHitPoint()
     {
@@ -99,38 +117,32 @@ public class Block : MonoBehaviour, Interactable {
 
     public void OnSpellHit(Transform spell)
     {
-        // Figure out what direction the block should move
-        Vector3 pos = transform.InverseTransformPoint(spell.position);
-        bool forward = Vector3.Dot(pos, Vector3.back) > 0.5f && Vector3.Dot(spell.forward, transform.forward) > 0.5f;
-        bool back = Vector3.Dot(pos, Vector3.forward) > 0.5f && Vector3.Dot(spell.forward, -transform.forward) > 0.5f;
-        bool left = Vector3.Dot(pos, Vector3.right) > 0.5f && Vector3.Dot(spell.forward, -transform.right) > 0.5f;
-        bool right = Vector3.Dot(pos, Vector3.left) > 0.5f && Vector3.Dot(spell.forward, transform.right) > 0.5f;
-
+        SetHitDirection(spell);
         // Distance to shoot a ray to check for collisions
         Vector3 startPoint = transform.position;
         Vector3 endPoint;
 
         // Set target position and ray range
-        if (forward)
+        if (hitDirection == transform.forward)
         {
             startPoint.z += (blockWidth - 1);
             endPoint = startPoint + (transform.forward * moveDistance);
             targetPosition = transform.position + (transform.forward * moveDistance);
             moving = MoveValid(startPoint, endPoint, blockLength, 1, 0);
             //Debug.Log("Forward");
-        }else if (back)
+        }else if (hitDirection == -transform.forward)
         {
             endPoint = startPoint + (-transform.forward * moveDistance);
             targetPosition = transform.position + (-transform.forward * moveDistance);
             moving = MoveValid(startPoint, endPoint, blockLength, 1, 0);
             //Debug.Log("Back");
-        } else if (left)
+        } else if (hitDirection == -transform.right)
         {
             endPoint = startPoint + (-transform.right * moveDistance);
             targetPosition = transform.position + (-transform.right * moveDistance);
             moving = MoveValid(startPoint, endPoint, blockWidth, 0, 1);
             //Debug.Log("Left");
-        } else if (right)
+        } else if (hitDirection == transform.right)
         {
             startPoint.x += (blockLength - 1);
             endPoint = startPoint + (transform.right * moveDistance);
@@ -149,7 +161,6 @@ public class Block : MonoBehaviour, Interactable {
         }
 
     }
-
 
     private bool MoveValid(Vector3 start, Vector3 target, int limit, float xinc, float zinc)
     {
