@@ -12,6 +12,11 @@ public class Block : MonoBehaviour, Interactable {
     [Header("Size and Shape")]
     public int blockWidth = 1;
     public int blockLength = 1;
+
+    int currentLimit = 0;
+    float currentXInc = 0;
+    float currentZInc = 0;
+
     public GameObject blockPrefab;
     public bool generateShape = false;
 
@@ -124,7 +129,7 @@ public class Block : MonoBehaviour, Interactable {
 
     public void OnSpellHit(Transform spell)
     {
-        if (moving)
+        if (moving && MoveValid(transform.position,targetPosition+hitDirection,currentLimit,currentXInc,currentZInc))
         {
             targetPosition += hitDirection;
             return;
@@ -178,6 +183,11 @@ public class Block : MonoBehaviour, Interactable {
     {
         Vector3 pointA = start;
         Vector3 pointB = target;
+
+        currentLimit= limit;
+        currentXInc = xinc;
+        currentZInc = zinc;
+
         for(int i=0; i < limit; i++)
         {
             //Debug.Log("Drawing Ray from: " + pointA + ", to " + pointB);
@@ -199,6 +209,7 @@ public class Block : MonoBehaviour, Interactable {
         Vector3 direction = end - start;
         if (Physics.Raycast(start, direction, out hit, range))
         {
+            Debug.Log(hit.transform.tag == "Portal" || hit.transform.tag == "FloorSwitch");
             return (hit.transform.tag == "Portal" || hit.transform.tag == "FloorSwitch");
         }
         else
