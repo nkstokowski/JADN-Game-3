@@ -26,6 +26,7 @@ public enum BlockType
     MoveTrack,
     MoveLoop,
     Transforming
+	//Portal
 }
 
 public class CustomBlock : MonoBehaviour, SwitchTarget
@@ -79,8 +80,16 @@ public class CustomBlock : MonoBehaviour, SwitchTarget
             case BlockType.MoveOnce:
                 movingForward = true;
                 break;
+			//case BlockType.Portal:
+				//TurnOnPortal ();
+				//break;
         }
     }
+
+	void TurnOnPortal()
+	{
+		transform.Find ("Portal").gameObject.SetActive (true);
+	}
 
     // Receive the signal that the switch was turned off
     public void HandleSwitchOff()

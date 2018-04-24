@@ -45,12 +45,17 @@ public class Portal : MonoBehaviour, SwitchTarget {
     public void HandleSwitchOn()
     {
         portalActive = true;
+		gameObject.GetComponent<BoxCollider> ().enabled = true;
+		transform.Find ("Portal").gameObject.SetActive (true);
+		transform.Find ("Inner").gameObject.SetActive (true);
+		transform.Find ("Outer").gameObject.SetActive (true);
     }
 
     public void HandleSwitchOff()
     {
         if (canTurnOff)
         {
+			transform.Find ("Portal").gameObject.SetActive (false);
             portalActive = false;
         }
     }
