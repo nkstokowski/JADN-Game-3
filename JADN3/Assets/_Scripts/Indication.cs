@@ -19,12 +19,14 @@ public class Indication : MonoBehaviour {
 	}
 
 	void Update(){
-		if(isFlashing)
+		if(isFlashing){
 			flipButton.GetComponent<Animation>().Play("Notification");
+		}
 	}
 
 	public void TriggerNotification(){
-		isFlashing = !isFlashing;
+		isFlashing = true;
+		Debug.Log("Setting flashing on.");
 	}
 
 	public bool GetIsFlashing(){

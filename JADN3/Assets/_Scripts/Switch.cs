@@ -16,8 +16,10 @@ public class Switch : MonoBehaviour{
     public SwitchType switchType = SwitchType.Switch;
     // Whether or not this switch is on
     public bool switchOn = false;
+    public bool sendsNotification = false;
     // The list of game objects this switch will send a signal to
     public List<GameObject> targetObjects; 
+    public Indication notificationCenter;
 
     // The list of SwitchTarget components to send signals to
     protected List<SwitchTarget> targets; 
@@ -77,6 +79,10 @@ public class Switch : MonoBehaviour{
         {
             BuildTargetList();
         }
+        if(sendsNotification)
+        {
+            notificationCenter.TriggerNotification();
+        }
     }
 
     // Send the turn off signal to all targets
@@ -99,6 +105,10 @@ public class Switch : MonoBehaviour{
         if (recalcList)
         {
             BuildTargetList();
+        }
+        if(sendsNotification)
+        {
+            notificationCenter.TriggerNotification();
         }
     }
 

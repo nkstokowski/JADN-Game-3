@@ -31,6 +31,7 @@ public class Block : MonoBehaviour, Interactable {
     private BoxCollider myCollider;
     private NavMeshObstacle myObstacle;
     private Vector3 aimPosition;
+    public Indication notificationCenter;
 
 	// Use this for initialization
 	void Start () {
@@ -234,6 +235,8 @@ public class Block : MonoBehaviour, Interactable {
         originalPosition = pos;
         if (swapLayer)
         {
+            Debug.Log("In here");
+            notificationCenter.TriggerNotification();
             SwapBlockLayer();
         }
     }

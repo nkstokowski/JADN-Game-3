@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f0308e1e730ce4eb23d6f7035a6307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentLayer: 10
   blockWidth: 1
   blockLength: 1
   blockPrefab: {fileID: 1210245942886210, guid: 89107859f4fea1d4d805ac66850b18ca,
@@ -160,6 +161,8 @@ MonoBehaviour:
   generateShape: 0
   moveSpeed: 5
   moveDistance: 1
+  notificationCenter: {fileID: 114338456973504162, guid: 673f49b90f68e48e19f1d91336ff1645,
+    type: 2}
 --- !u!208 &208887767008169722
 NavMeshObstacle:
   m_ObjectHideFlags: 1
