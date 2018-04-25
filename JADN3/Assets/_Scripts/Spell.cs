@@ -31,6 +31,7 @@ public class Spell : MonoBehaviour {
             Interactable target = other.gameObject.GetComponent<Interactable>();
             if((Component)target)
             {
+                Debug.Log("Here");
                 target.OnSpellHit(transform);
             }
             objectPooler.ReQueue(this.gameObject, "Spell");
