@@ -6343,27 +6343,6 @@ Prefab:
       propertyPath: spawnLocation
       value: 
       objectReference: {fileID: 224762589}
-    - target: {fileID: 114842804219177518, guid: 5b461e83f76cf463c9c71d2e9ec05bbf,
-        type: 2}
-      propertyPath: canSendPlayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1694452224753586, guid: 5b461e83f76cf463c9c71d2e9ec05bbf, type: 2}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1290250283236134, guid: 5b461e83f76cf463c9c71d2e9ec05bbf, type: 2}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1128609543817152, guid: 5b461e83f76cf463c9c71d2e9ec05bbf, type: 2}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1195455383241882, guid: 5b461e83f76cf463c9c71d2e9ec05bbf, type: 2}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b461e83f76cf463c9c71d2e9ec05bbf, type: 2}
   m_IsPrefabParent: 0
