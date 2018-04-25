@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657892, g: 0.4964127, b: 0.5748172, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2033,7 +2033,7 @@ Prefab:
     - target: {fileID: 114082877362440330, guid: 8a84e3c613bc4f448a073e9903dedc2d,
         type: 2}
       propertyPath: targetObjects.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4899158457222560, guid: 8a84e3c613bc4f448a073e9903dedc2d, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2075,17 +2075,17 @@ Prefab:
         type: 2}
       propertyPath: targetObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 2016130025}
+      objectReference: {fileID: 111033037}
     - target: {fileID: 114082877362440330, guid: 8a84e3c613bc4f448a073e9903dedc2d,
         type: 2}
       propertyPath: targetObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 587333590}
+      objectReference: {fileID: 1879789743}
     - target: {fileID: 114082877362440330, guid: 8a84e3c613bc4f448a073e9903dedc2d,
         type: 2}
       propertyPath: targetObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 699131213}
+      objectReference: {fileID: 1660615154}
     - target: {fileID: 114082877362440330, guid: 8a84e3c613bc4f448a073e9903dedc2d,
         type: 2}
       propertyPath: targetObjects.Array.data[3]
@@ -5293,7 +5293,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1787319725542648, guid: e397a1c664cb20149b448fed27225674, type: 2}
       propertyPath: m_Name
-      value: Wall_Default (53)
+      value: CustomWall
       objectReference: {fileID: 0}
     - target: {fileID: 4133814991499220, guid: e397a1c664cb20149b448fed27225674, type: 2}
       propertyPath: m_LocalScale.x
@@ -11947,7 +11947,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1787319725542648, guid: e397a1c664cb20149b448fed27225674, type: 2}
       propertyPath: m_Name
-      value: Wall_Default (52)
+      value: CustomWall
       objectReference: {fileID: 0}
     - target: {fileID: 4133814991499220, guid: e397a1c664cb20149b448fed27225674, type: 2}
       propertyPath: m_LocalScale.x
@@ -12276,15 +12276,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4133814991499220, guid: e397a1c664cb20149b448fed27225674, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 7
+      value: 6.96
       objectReference: {fileID: 0}
     - target: {fileID: 4133814991499220, guid: e397a1c664cb20149b448fed27225674, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.01999998
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 4133814991499220, guid: e397a1c664cb20149b448fed27225674, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -6
+      value: -6.05
       objectReference: {fileID: 0}
     - target: {fileID: 4133814991499220, guid: e397a1c664cb20149b448fed27225674, type: 2}
       propertyPath: m_LocalRotation.x
@@ -12308,7 +12308,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1787319725542648, guid: e397a1c664cb20149b448fed27225674, type: 2}
       propertyPath: m_Name
-      value: Wall_Default (51)
+      value: CustomWall
       objectReference: {fileID: 0}
     - target: {fileID: 4133814991499220, guid: e397a1c664cb20149b448fed27225674, type: 2}
       propertyPath: m_LocalScale.x

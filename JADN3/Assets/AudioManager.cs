@@ -14,6 +14,14 @@ public class AudioManager : MonoBehaviour {
 		audioSource.GetComponent<AudioSource>().PlayOneShot(sound.clip);
 	}
 
+	public void PlaySoundWithTag(string tag){
+		for(int i=0;i<sounds.Length;i++){
+			if(sounds[i].tag == tag){
+				GetComponent<AudioSource>().PlayOneShot(sounds[i].clip);
+			}
+		}
+	}
+
 	//This returns a sound by a tag.
 	public Sound GetSoundByTag(string tag){
 		for(int i = 0; i < sounds.Length; i++){
