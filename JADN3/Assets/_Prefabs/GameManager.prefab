@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114813825362291272}
   - component: {fileID: 114800897425822564}
   - component: {fileID: 114338456973504162}
+  - component: {fileID: 114383031837197820}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -58,6 +59,20 @@ MonoBehaviour:
   flipButton: {fileID: 0}
   flashAnimation: {fileID: 7400000, guid: be317f1b040d84790914df18be7f7450, type: 2}
   isFlashing: 0
+--- !u!114 &114383031837197820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1320873785692170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c7aaba43ad84f6090de98ed1601ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - clip: {fileID: 8300000, guid: 48a5e2d6ba7fd4a379671e453254cb76, type: 3}
+    tag: Default
 --- !u!114 &114612749125748286
 MonoBehaviour:
   m_ObjectHideFlags: 1
