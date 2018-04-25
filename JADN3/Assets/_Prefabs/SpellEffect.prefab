@@ -208,6 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  spell: {fileID: 1079825822069744, guid: 1091b10bf5119ec4f9892a5e01bf5fc8, type: 2}
 --- !u!135 &135186205427776158
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -280,7 +281,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 781466590
+  randomSeed: 1399728440
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3647,7 +3648,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1225737654
+  randomSeed: 332348449
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -7008,7 +7009,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -2126798925
+  randomSeed: 1149782313
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -10387,7 +10388,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 918289954
+  randomSeed: -1451241996
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -12899,11 +12900,11 @@ ParticleSystem:
     radiusScale: 1
   SubModule:
     serializedVersion: 2
-    enabled: 0
+    enabled: 1
     subEmitters:
     - serializedVersion: 2
       emitter: {fileID: 0}
-      type: 0
+      type: 2
       properties: 0
   LightsModule:
     enabled: 0
@@ -13748,7 +13749,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -784862329
+  randomSeed: -1599080821
   InitialModule:
     serializedVersion: 3
     enabled: 1

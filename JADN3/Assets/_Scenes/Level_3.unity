@@ -7572,8 +7572,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchType: 0
   switchOn: 0
+  sendsNotification: 0
   targetObjects:
   - {fileID: 107421273}
+  notificationCenter: {fileID: 0}
 --- !u!4 &979156566 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4133814991499220, guid: e397a1c664cb20149b448fed27225674,
@@ -14825,8 +14827,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchType: 0
   switchOn: 0
+  sendsNotification: 0
   targetObjects:
   - {fileID: 1405479923}
+  notificationCenter: {fileID: 0}
 --- !u!1 &2075757572 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1242085853088286, guid: 495fdf6a91ea82d41b9f563044c43860,

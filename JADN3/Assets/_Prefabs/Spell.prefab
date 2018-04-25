@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  spell: {fileID: 1079825822069744, guid: 1091b10bf5119ec4f9892a5e01bf5fc8, type: 2}
 --- !u!135 &135317838160972314
 SphereCollider:
   m_ObjectHideFlags: 1

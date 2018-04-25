@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - FloorSwitch
   - Portal
+  - SpellDeath
   layers:
   - Default
   - TransparentFX

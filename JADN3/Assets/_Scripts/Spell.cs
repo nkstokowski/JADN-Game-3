@@ -7,13 +7,13 @@ public class Spell : MonoBehaviour {
 	public float speed = 5.0f;
 
     ObjectPooling objectPooler;
-
+	public GameObject spell;
 
     // Use this for initialization
     void Start () {
         objectPooler = ObjectPooling.Instance;
     }
-	
+
 	// Update is called once per frame
 	void Update () {
 		MoveObject ();
@@ -35,6 +35,15 @@ public class Spell : MonoBehaviour {
                 target.OnSpellHit(transform);
             }
             objectPooler.ReQueue(this.gameObject, "Spell");
+			Instantiate (spell, gameObject.transform.position, Quaternion.identity);
+			Invoke ("SpellDeath", 1f);
         }
+
     }
+
+	void SpellDeath()
+	{
+		GameObject remove = GameObject.FindGameObjectWithTag ("SpellDeath");
+		Destroy (remove);
+	}
 }
