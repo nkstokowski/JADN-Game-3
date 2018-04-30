@@ -15,12 +15,13 @@ public class Portal : MonoBehaviour, SwitchTarget {
         if (!portalActive) return;
 
 		if(other.gameObject.tag == "Player" && !canSendPlayer) return;
-
-		if(other.gameObject.tag == "Player" && canSendPlayer) {
-			other.gameObject.GetComponent<NavMeshAgent>().enabled = false;
-		}
-
-		Teleport(other.gameObject);
+        else if(other.gameObject.tag != "Player" && canSendPlayer) return;
+        else{
+            if(other.gameObject.tag == "Player"){
+                other.gameObject.GetComponent<NavMeshAgent>().enabled = false;
+            }
+            Teleport(other.gameObject);
+        }	
 	}
 
     public void Teleport(GameObject obj)
