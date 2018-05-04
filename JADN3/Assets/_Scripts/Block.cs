@@ -210,7 +210,6 @@ public class Block : MonoBehaviour, Interactable {
         Vector3 direction = end - start;
         if (Physics.Raycast(start, direction, out hit, range))
         {
-            Debug.Log(hit.transform.tag == "Portal" || hit.transform.tag == "FloorSwitch");
             return (hit.transform.tag == "Portal" || hit.transform.tag == "FloorSwitch");
         }
         else

@@ -8,16 +8,21 @@ public class PlayerController : MonoBehaviour {
     public Camera cam;
     public NavMeshAgent agent;
     ObjectPooling objectPooler;
+    public Animator playerAnimator;
 
     [Header("Rotation")]
     public float rotationSpeed = 20f;
 
+    public float speed;
+
     private bool rotating = false;
     private Quaternion targetRotation;
+    private Vector3 lastPosition;
 
     void Start()
     {
         objectPooler = ObjectPooling.Instance;
+        lastPosition = transform.position;
     }
 
     void Update () {
@@ -47,12 +52,12 @@ public class PlayerController : MonoBehaviour {
         if (rotating)
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-            if(Quaternion.Angle(transform.rotation, targetRotation) < 5f)
+            if (Quaternion.Angle(transform.rotation, targetRotation) < 5f)
             {
                 // Complete Rotation
                 //Debug.Log("Rotation Done");
-				agent.velocity = Vector3.zero;
-				agent.isStopped = true;
+                agent.velocity = Vector3.zero;
+                agent.isStopped = true;
                 transform.rotation = targetRotation;
                 rotating = false;
 
@@ -61,6 +66,13 @@ public class PlayerController : MonoBehaviour {
                 objectPooler.SpawnFromPool(transform.position, transform.rotation, "Spell");
             }
         }
+    }
+
+    void FixedUpdate()
+    {
+        speed = Mathf.Lerp(speed, (transform.position - lastPosition).magnitude / Time.deltaTime, 0.75f);
+        lastPosition = transform.position;
+        playerAnimator.SetFloat("Speed", speed);
     }
 
     // Fire a spell at transform
@@ -75,6 +87,11 @@ public class PlayerController : MonoBehaviour {
         Vector3 targetAimPoint = obj.GetSpellHitPoint();
         targetRotation = Quaternion.LookRotation(targetAimPoint - transform.position);
         rotating = true;
+
+        float angle = Vector3.Angle(transform.position, ((Component)obj).transform.position);
+        playerAnimator.SetTrigger("Cast");
+        Debug.Log(angle);
+        playerAnimator.SetFloat("Angle", angle);
 
         // Spell fires once rotation is complete
     }
