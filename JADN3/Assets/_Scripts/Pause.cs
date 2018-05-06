@@ -51,4 +51,9 @@ public class Pause : MonoBehaviour {
 		Time.timeScale = 1f;
 		GetComponent<GameManager>().LoadLevel("Start menu");
 	}
+
+	public void SkipTutorial(){
+		Time.timeScale = 1f;
+		GetComponent<GameManager> ().LoadLevel ("Level1");
+	}
 }
