@@ -78,4 +78,8 @@ public class GameManager : MonoBehaviour {
             objectPooler.ReQueue(obj, tag);
         }
     }
+
+    public void LoadLevel(string name){
+        Initiate.Fade(name,Color.black,0.7f);
+    }
 }

@@ -42,10 +42,13 @@ public class Pause : MonoBehaviour {
 
 	public void Reload()
 	{
-		SceneManager.LoadScene (scene.name);
+		Time.timeScale = 1f;
+		Debug.Log(scene.name);
+		GetComponent<GameManager>().LoadLevel(scene.name);
 	}
 
 	public void ReturnToMenu(){
-		SceneManager.LoadScene("Menu");
+		Time.timeScale = 1f;
+		GetComponent<GameManager>().LoadLevel("Start menu");
 	}
 }

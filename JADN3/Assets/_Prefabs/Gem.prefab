@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23636013132390404}
   - component: {fileID: 64086898190882892}
   - component: {fileID: 114822978041730470}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Gem
   m_TagString: Gem
   m_Icon: {fileID: 0}
@@ -36,13 +36,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1518861121040136}
-  m_LocalRotation: {x: -0.9999851, y: -0, z: -0, w: 0.0054567484}
-  m_LocalPosition: {x: 9.69, y: 1.44, z: 9.74}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 9.59, y: -0.334, z: 15.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -179.375, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23636013132390404
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -110,3 +110,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 75
+  loadSceneName: Level_3
+  manager: {fileID: 0}
