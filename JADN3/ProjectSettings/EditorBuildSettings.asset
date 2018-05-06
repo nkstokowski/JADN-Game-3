@@ -6,5 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/TestLevel - BlockPushing.unity
-    guid: c320d5472f723114c9c83bc52cb8ab69
+    path: Assets/_Scenes/Start menu.unity
+    guid: 17471495086d25d41893d9f71db5c8f5
+  - enabled: 1
+    path: Assets/_Scenes/Level1.unity
+    guid: f22c39d7d847686489b4f963e65debaf
+  - enabled: 1
+    path: Assets/_Scenes/RealLevel2.unity
+    guid: 64ff1a9c5118b4f638a5bce6e8f751dd
+  - enabled: 1
+    path: Assets/_Scenes/Level_3.unity
+    guid: 07f4ebbadc2139144b4c056b2a6e316f
+  - enabled: 1
+    path: Assets/_Scenes/Level4.unity
+    guid: 4d9d9f62bdcd3ba478e76a34e2d35ea5
