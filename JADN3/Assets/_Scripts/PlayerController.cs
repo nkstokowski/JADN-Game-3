@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour {
         // Rotation is active
         if (rotating)
         {
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
             if (Quaternion.Angle(transform.rotation, targetRotation) < 5f)
             {
                 // Complete Rotation
