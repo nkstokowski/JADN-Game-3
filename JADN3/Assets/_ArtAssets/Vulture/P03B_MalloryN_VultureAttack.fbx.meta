@@ -1,0 +1,194 @@
+fileFormatVersion: 2
+guid: 4343d34df7b104671a783952bb838646
+timeCreated: 1525623125
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: AnkleL_JT
+    100002: AnkleR_JT
+    100004: Base_JT
+    100006: EarBaseL_JT
+    100008: EarBaseR_JT
+    100010: EarMidL_JT
+    100012: EarMidR_JT
+    100014: EarTipL_JT
+    100016: EarTipR_JT
+    100018: FootL_JT
+    100020: FootR_JT
+    100022: Head_JT
+    100024: HeadBase_JT
+    100026: imagePlane1
+    100028: InToeBaseL_JT
+    100030: InToeBaseR_JT
+    100032: InToeMidL_JT
+    100034: InToeMidR_JT
+    100036: InToeTipL_JT
+    100038: InToeTipR_JT
+    100040: KneeL_JT
+    100042: KneeR_JT
+    100044: LegBaseL_JT
+    100046: LegBaseR_JT
+    100048: Mid_JT
+    100050: MidToeBaseL_JT
+    100052: MidToeBaseR_JT
+    100054: MidToeMidL_JT
+    100056: MidToeMidR_JT
+    100058: MidToeTipL_JT
+    100060: MidToeTipR_JT
+    100062: Neck_JT
+    100064: NeckBase_JT
+    100066: OutToeBaseL_JT
+    100068: OutToeBaseR_JT
+    100070: OutToeMidL_JT
+    100072: OutToeMidR_JT
+    100074: OutToeTipL_JT
+    100076: OutToeTipR_JT
+    100078: //RootNode
+    100080: TailBase_JT
+    100082: TailMid_JT
+    100084: TailTip_JT
+    100086: Torso_JT
+    100088: Vulture_SK
+    100090: WingBaseL_JT
+    100092: WingBaseR_JT
+    100094: WingMidL_JT
+    100096: WingMidR_JT
+    100098: WingTipL_JT
+    100100: WingTipR_JT
+    400000: AnkleL_JT
+    400002: AnkleR_JT
+    400004: Base_JT
+    400006: EarBaseL_JT
+    400008: EarBaseR_JT
+    400010: EarMidL_JT
+    400012: EarMidR_JT
+    400014: EarTipL_JT
+    400016: EarTipR_JT
+    400018: FootL_JT
+    400020: FootR_JT
+    400022: Head_JT
+    400024: HeadBase_JT
+    400026: imagePlane1
+    400028: InToeBaseL_JT
+    400030: InToeBaseR_JT
+    400032: InToeMidL_JT
+    400034: InToeMidR_JT
+    400036: InToeTipL_JT
+    400038: InToeTipR_JT
+    400040: KneeL_JT
+    400042: KneeR_JT
+    400044: LegBaseL_JT
+    400046: LegBaseR_JT
+    400048: Mid_JT
+    400050: MidToeBaseL_JT
+    400052: MidToeBaseR_JT
+    400054: MidToeMidL_JT
+    400056: MidToeMidR_JT
+    400058: MidToeTipL_JT
+    400060: MidToeTipR_JT
+    400062: Neck_JT
+    400064: NeckBase_JT
+    400066: OutToeBaseL_JT
+    400068: OutToeBaseR_JT
+    400070: OutToeMidL_JT
+    400072: OutToeMidR_JT
+    400074: OutToeTipL_JT
+    400076: OutToeTipR_JT
+    400078: //RootNode
+    400080: TailBase_JT
+    400082: TailMid_JT
+    400084: TailTip_JT
+    400086: Torso_JT
+    400088: Vulture_SK
+    400090: WingBaseL_JT
+    400092: WingBaseR_JT
+    400094: WingMidL_JT
+    400096: WingMidR_JT
+    400098: WingTipL_JT
+    400100: WingTipR_JT
+    2100000: lambert19
+    4300000: Vulture_SK
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Vulture_SK
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
