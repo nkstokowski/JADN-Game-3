@@ -38,7 +38,7 @@ public class Portal : MonoBehaviour, SwitchTarget {
             Block blockScript = obj.GetComponent<Block>();
             if (blockScript)
             {
-                blockScript.TeleportBlock(obj.transform.position, sendsAcrossLayer);
+                blockScript.TeleportBlock(spawnLocation.transform.position, sendsAcrossLayer);
             }
         }
     }
