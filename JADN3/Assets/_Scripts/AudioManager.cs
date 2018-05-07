@@ -17,7 +17,7 @@ public class AudioManager : MonoBehaviour {
 	public void PlaySoundWithTag(string tag){
 		for(int i=0;i<sounds.Length;i++){
 			if(sounds[i].tag == tag){
-				GetComponent<AudioSource>().PlayOneShot(sounds[i].clip);
+				GetComponent<AudioSource>().PlayOneShot(sounds[i].clip,0.5f);
 			}
 		}
 	}

@@ -28,6 +28,7 @@ public class Portal : MonoBehaviour, SwitchTarget {
     {
         obj.transform.position = spawnLocation.transform.position;
         //obj.layer = spawnLocation.layer;
+        FindObjectOfType<AudioManager>().PlaySoundWithTag("Teleport");
 
         if (obj.tag == "Player")
         {
@@ -45,6 +46,7 @@ public class Portal : MonoBehaviour, SwitchTarget {
 
     public void HandleSwitchOn()
     {
+        FindObjectOfType<AudioManager>().PlaySoundWithTag("PortalOn");
         portalActive = true;
 		gameObject.GetComponent<BoxCollider> ().enabled = true;
 		transform.Find ("Portal").gameObject.SetActive (true);

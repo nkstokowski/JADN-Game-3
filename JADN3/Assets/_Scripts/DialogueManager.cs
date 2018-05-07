@@ -37,8 +37,8 @@ public class DialogueManager : MonoBehaviour {
 
 	IEnumerator TypeSentence(string sentence) {
 		storyText.text += "";
-		foreach (char letter in sentence.ToCharArray()) {
-			storyText.text += letter;
+		for(int i = 0; i< sentence.ToCharArray().Length; i++){
+			storyText.text += sentence[i];
 			yield return new WaitForSeconds(0.025f);
 		}
 		storyText.text += "\n";

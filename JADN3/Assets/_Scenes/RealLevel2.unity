@@ -2263,6 +2263,16 @@ Prefab:
       propertyPath: manager
       value: 
       objectReference: {fileID: 1198573290}
+    - target: {fileID: 114822978041730470, guid: 3e6d2daaa5d3b4807bcbca67aba0795d,
+        type: 2}
+      propertyPath: finalPosition.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114822978041730470, guid: 3e6d2daaa5d3b4807bcbca67aba0795d,
+        type: 2}
+      propertyPath: loadSceneName
+      value: Dialogue_3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3e6d2daaa5d3b4807bcbca67aba0795d, type: 2}
   m_IsPrefabParent: 0
@@ -3490,29 +3500,34 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4505009051035038, guid: 673f49b90f68e48e19f1d91336ff1645, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -12.0336275
+      value: -11.55
       objectReference: {fileID: 0}
     - target: {fileID: 4505009051035038, guid: 673f49b90f68e48e19f1d91336ff1645, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.7509503
+      value: 13.1
       objectReference: {fileID: 0}
     - target: {fileID: 4505009051035038, guid: 673f49b90f68e48e19f1d91336ff1645, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -11.544972
+      value: -11.55
       objectReference: {fileID: 0}
     - target: {fileID: 4505009051035038, guid: 673f49b90f68e48e19f1d91336ff1645, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4505009051035038, guid: 673f49b90f68e48e19f1d91336ff1645, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4505009051035038, guid: 673f49b90f68e48e19f1d91336ff1645, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4505009051035038, guid: 673f49b90f68e48e19f1d91336ff1645, type: 2}
       propertyPath: m_LocalRotation.w
@@ -3520,7 +3535,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4505009051035038, guid: 673f49b90f68e48e19f1d91336ff1645, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114612749125748286, guid: 673f49b90f68e48e19f1d91336ff1645,
         type: 2}
@@ -3562,10 +3577,25 @@ Prefab:
       propertyPath: flipButton
       value: 
       objectReference: {fileID: 1693768014}
-    - target: {fileID: 114338456973504162, guid: 673f49b90f68e48e19f1d91336ff1645,
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
         type: 2}
-      propertyPath: isFlashing
-      value: 0
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1b4e056a22cba4ea68ed5baf918c8c1a, type: 3}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[2].tag
+      value: Teleport
+      objectReference: {fileID: 0}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f0361d312de2425cbe0714e056f1519, type: 3}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[3].tag
+      value: SpellHit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 673f49b90f68e48e19f1d91336ff1645, type: 2}
@@ -4345,7 +4375,7 @@ Prefab:
     - target: {fileID: 224002219255195852, guid: d23ef1fba9dd149d29d73e8b16e379c5,
         type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224002219255195852, guid: d23ef1fba9dd149d29d73e8b16e379c5,
         type: 2}
