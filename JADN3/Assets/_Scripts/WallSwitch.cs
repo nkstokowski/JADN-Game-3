@@ -31,10 +31,12 @@ public class WallSwitch : Switch, Interactable {
             if (switchOn)
             {
                 TurnOn();
+				FindObjectOfType<AudioManager> ().PlaySoundWithTag ("WallSwitch_On");
             }
             else
             {
                 TurnOff();
+				FindObjectOfType<AudioManager> ().PlaySoundWithTag ("Switch_Off");
             }
         }
         else

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -37,8 +37,8 @@ public class DialogueManager : MonoBehaviour {
 
 	IEnumerator TypeSentence(string sentence) {
 		storyText.text += "";
-		for(int i = 0; i< sentence.ToCharArray().Length; i++){
-			storyText.text += sentence[i];
+		foreach (char letter in sentence.ToCharArray()) {
+			storyText.text += letter;
 			yield return new WaitForSeconds(0.025f);
 		}
 		storyText.text += "\n";

@@ -10,6 +10,7 @@ public class Pause : MonoBehaviour {
 	public GameObject pausedText;
 	public GameObject menuText;
 	public GameObject resetText;
+	public GameObject skipTutorial;
 	public Scene scene;
 
 	// Update is called once per frame
@@ -31,11 +32,13 @@ public class Pause : MonoBehaviour {
 			menuText.SetActive(true);
 			pausedText.SetActive(true);
 			resetText.SetActive (true);
+			skipTutorial.SetActive (true);
 			Time.timeScale = 0f;
 		} else {
 			menuText.SetActive(false);
 			pausedText.SetActive(false);
 			resetText.SetActive (false);
+			skipTutorial.SetActive (false);
 			Time.timeScale = 1f;
 		}
 	}
@@ -50,5 +53,10 @@ public class Pause : MonoBehaviour {
 	public void ReturnToMenu(){
 		Time.timeScale = 1f;
 		GetComponent<GameManager>().LoadLevel("Start menu");
+	}
+
+	public void SkipTutorial(){
+		Time.timeScale = 1f;
+		GetComponent<GameManager> ().LoadLevel ("Level1");
 	}
 }

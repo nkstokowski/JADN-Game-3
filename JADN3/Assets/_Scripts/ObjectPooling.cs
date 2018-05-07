@@ -58,6 +58,7 @@ public class ObjectPooling : MonoBehaviour {
                 GameObject objectToSpawn = poolDictionary[tag].Dequeue();
 
                 objectToSpawn.SetActive(true);
+				FindObjectOfType<AudioManager> ().PlaySoundWithTag ("LightSide");
                 objectToSpawn.transform.position = position;
                 objectToSpawn.transform.rotation = rotation;
 
