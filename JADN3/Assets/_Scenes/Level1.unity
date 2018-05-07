@@ -4147,6 +4147,7 @@ GameObject:
   - component: {fileID: 592216377}
   - component: {fileID: 592216376}
   - component: {fileID: 592216375}
+  - component: {fileID: 592216374}
   m_Layer: 0
   m_Name: Bottom Camera
   m_TagString: MainCamera
@@ -4154,6 +4155,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!81 &592216374
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 592216373}
+  m_Enabled: 0
 --- !u!124 &592216375
 Behaviour:
   m_ObjectHideFlags: 0
@@ -6688,6 +6696,7 @@ GameObject:
   - component: {fileID: 906444440}
   - component: {fileID: 906444439}
   - component: {fileID: 906444437}
+  - component: {fileID: 906444436}
   m_Layer: 0
   m_Name: Top Camera
   m_TagString: MainCamera
@@ -6695,6 +6704,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!81 &906444436
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 906444435}
+  m_Enabled: 0
 --- !u!124 &906444437
 Behaviour:
   m_ObjectHideFlags: 0
@@ -7089,7 +7105,7 @@ Prefab:
     - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
         type: 2}
       propertyPath: sounds.Array.size
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4505009051035038, guid: 673f49b90f68e48e19f1d91336ff1645, type: 2}
       propertyPath: m_LocalPosition.x
@@ -7217,6 +7233,46 @@ Prefab:
         type: 2}
       propertyPath: sounds.Array.data[6].tag
       value: Step
+      objectReference: {fileID: 0}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6bd9e6af68cf3f64693a6e6567f002b7, type: 3}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[7].tag
+      value: Switch_Off
+      objectReference: {fileID: 0}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[8].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0649cdd5d15382b4a81bb5d03ee971c5, type: 3}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[8].tag
+      value: WallSwitch_On
+      objectReference: {fileID: 0}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[9].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 33c11f60e8630ac47aee8b41cd6ef0e5, type: 3}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[9].tag
+      value: LightSide
+      objectReference: {fileID: 0}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[10].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f3ad4de023659be408e9f7cec00edfb9, type: 3}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[10].tag
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 673f49b90f68e48e19f1d91336ff1645, type: 2}

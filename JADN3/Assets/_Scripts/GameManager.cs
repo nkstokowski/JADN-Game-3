@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour {
             enemyAgents[i] = enemy.GetComponent<NavMeshAgent>();
             i++;
         }
+		FindObjectOfType<AudioManager> ().PlaySoundWithTag ("Ambient");
     }
 	
 	// Update is called once per frame

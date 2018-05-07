@@ -20,7 +20,7 @@ public class FloorSwitch : Switch {
         if(other.name != "Ground")
         {
             switchOn = true;
-
+			FindObjectOfType<AudioManager> ().PlaySoundWithTag ("Floor");
             TurnOn();
 
         }
@@ -32,7 +32,7 @@ public class FloorSwitch : Switch {
         if (other.name != "Ground")
         {
             switchOn = false;
-
+			FindObjectOfType<AudioManager> ().PlaySoundWithTag ("Switch_Off");
             TurnOff();
 
         }

@@ -3938,7 +3938,8 @@ Prefab:
       propertyPath: sounds.Array.data[6].tag
       value: Step
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 673f49b90f68e48e19f1d91336ff1645, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &967702368
@@ -5099,6 +5100,40 @@ AudioListener:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1198573290}
   m_Enabled: 1
+--- !u!114 &1198573292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1198573290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c7aaba43ad84f6090de98ed1601ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - clip: {fileID: 8300000, guid: 48a5e2d6ba7fd4a379671e453254cb76, type: 3}
+    tag: Default
+  - clip: {fileID: 8300000, guid: 171e80ad8a2e240cb95853a5b34ddbbd, type: 3}
+    tag: PortalOn
+  - clip: {fileID: 8300000, guid: 1b4e056a22cba4ea68ed5baf918c8c1a, type: 3}
+    tag: Teleport
+  - clip: {fileID: 8300000, guid: 7f0361d312de2425cbe0714e056f1519, type: 3}
+    tag: SpellHit
+  - clip: {fileID: 8300000, guid: 381452d3176d5415da04e5215fbc5cc2, type: 3}
+    tag: Ambient
+  - clip: {fileID: 8300000, guid: 7a904ebe7dcf139429d89dc06dc11e0f, type: 3}
+    tag: GemCollect
+  - clip: {fileID: 8300000, guid: 89bff2cb941014666bfd750cacb0f4a8, type: 3}
+    tag: Step
+  - clip: {fileID: 8300000, guid: 6bd9e6af68cf3f64693a6e6567f002b7, type: 3}
+    tag: Switch_Off
+  - clip: {fileID: 8300000, guid: 0649cdd5d15382b4a81bb5d03ee971c5, type: 3}
+    tag: WallSwitch_On
+  - clip: {fileID: 8300000, guid: 33c11f60e8630ac47aee8b41cd6ef0e5, type: 3}
+    tag: LightSide
+  - clip: {fileID: 8300000, guid: f3ad4de023659be408e9f7cec00edfb9, type: 3}
+    tag: Floor
 --- !u!1001 &1203373463
 Prefab:
   m_ObjectHideFlags: 0
