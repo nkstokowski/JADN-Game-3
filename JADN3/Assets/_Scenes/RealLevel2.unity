@@ -1318,19 +1318,6 @@ Prefab:
       propertyPath: cam
       value: 
       objectReference: {fileID: 906444439}
-    - target: {fileID: 1142020422951770, guid: 25c17989a772759479120497c1a84c53, type: 2}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1377620317410126, guid: 25c17989a772759479120497c1a84c53, type: 2}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 114167370521304412, guid: 25c17989a772759479120497c1a84c53,
-        type: 2}
-      propertyPath: playerAnimator
-      value: 
-      objectReference: {fileID: 1900781374}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 25c17989a772759479120497c1a84c53, type: 2}
   m_IsPrefabParent: 0
@@ -3503,7 +3490,7 @@ Prefab:
     - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
         type: 2}
       propertyPath: sounds.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4505009051035038, guid: 673f49b90f68e48e19f1d91336ff1645, type: 2}
       propertyPath: m_LocalPosition.x
@@ -3596,6 +3583,26 @@ Prefab:
         type: 2}
       propertyPath: sounds.Array.data[3].tag
       value: SpellHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 381452d3176d5415da04e5215fbc5cc2, type: 3}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[4].tag
+      value: Ambient
+      objectReference: {fileID: 0}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89bff2cb941014666bfd750cacb0f4a8, type: 3}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[5].tag
+      value: Step
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 673f49b90f68e48e19f1d91336ff1645, type: 2}
@@ -7456,11 +7463,6 @@ GameObject:
 --- !u!4 &1900781373 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4251825084174924, guid: 25c17989a772759479120497c1a84c53,
-    type: 2}
-  m_PrefabInternal: {fileID: 346646545}
---- !u!95 &1900781374 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95181214470476176, guid: 25c17989a772759479120497c1a84c53,
     type: 2}
   m_PrefabInternal: {fileID: 346646545}
 --- !u!1 &1918567890 stripped
