@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour {
 
         float angle = Vector3.Angle(transform.position, ((Component)obj).transform.position);
         playerAnimator.SetTrigger("Cast");
-        //Debug.Log(angle);
+        Debug.Log(angle);
         playerAnimator.SetFloat("Angle", angle);
 
         // Spell fires once rotation is complete
