@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657892, g: 0.4964127, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -529,6 +529,13 @@ GameObject:
   m_PrefabParentObject: {fileID: 1320873785692170, guid: 673f49b90f68e48e19f1d91336ff1645,
     type: 2}
   m_PrefabInternal: {fileID: 964011125}
+--- !u!81 &281512699
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 281512698}
+  m_Enabled: 1
 --- !u!114 &281512701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,6 +549,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pausedText: {fileID: 0}
   menuText: {fileID: 0}
+  resetText: {fileID: 0}
+  skipTutorial: {fileID: 0}
 --- !u!1 &291073882
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,7 +1289,6 @@ GameObject:
   - component: {fileID: 592216377}
   - component: {fileID: 592216376}
   - component: {fileID: 592216375}
-  - component: {fileID: 592216374}
   m_Layer: 0
   m_Name: Bottom Camera
   m_TagString: MainCamera
@@ -1288,13 +1296,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!81 &592216374
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 592216373}
-  m_Enabled: 0
 --- !u!124 &592216375
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1857,7 +1858,6 @@ GameObject:
   - component: {fileID: 906444440}
   - component: {fileID: 906444439}
   - component: {fileID: 906444437}
-  - component: {fileID: 906444436}
   m_Layer: 0
   m_Name: Top Camera
   m_TagString: MainCamera
@@ -1865,13 +1865,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &906444436
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 906444435}
-  m_Enabled: 1
 --- !u!124 &906444437
 Behaviour:
   m_ObjectHideFlags: 0
@@ -3598,7 +3591,11 @@ MonoBehaviour:
   bottomGround: {r: 0.7447515, g: 0.75, b: 0.3694853, a: 0}
   groundMat: {fileID: 2100000, guid: 3f3eb11f68c607144aa56d9f83cd26c9, type: 2}
   speed: 0.5
+  flipButton: {fileID: 0}
+  toBottomImage: {fileID: 0}
+  toTopImage: {fileID: 0}
   gameManager: {fileID: 209625335}
+  indication: {fileID: 0}
   canFlip: 1
 --- !u!4 &1638232162
 Transform:
@@ -3873,8 +3870,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 115cec828a2fb5c439f532a10531d32e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnedOn: 0
-  flip: {fileID: 0}
+  switchType: 0
+  switchOn: 0
+  sendsNotification: 0
+  targetObjects: []
+  notificationCenter: {fileID: 0}
 --- !u!4 &1734147214
 Transform:
   m_ObjectHideFlags: 0

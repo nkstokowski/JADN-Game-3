@@ -196,6 +196,13 @@ GameObject:
   m_PrefabParentObject: {fileID: 1320873785692170, guid: 673f49b90f68e48e19f1d91336ff1645,
     type: 2}
   m_PrefabInternal: {fileID: 964011125}
+--- !u!81 &136692181
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 136692180}
+  m_Enabled: 1
 --- !u!114 &136692182 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114800897425822564, guid: 673f49b90f68e48e19f1d91336ff1645,
@@ -409,7 +416,6 @@ GameObject:
   - component: {fileID: 592216377}
   - component: {fileID: 592216376}
   - component: {fileID: 592216375}
-  - component: {fileID: 592216374}
   m_Layer: 0
   m_Name: Bottom Camera
   m_TagString: MainCamera
@@ -417,13 +423,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!81 &592216374
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 592216373}
-  m_Enabled: 0
 --- !u!124 &592216375
 Behaviour:
   m_ObjectHideFlags: 0
@@ -804,7 +803,6 @@ GameObject:
   - component: {fileID: 906444440}
   - component: {fileID: 906444439}
   - component: {fileID: 906444437}
-  - component: {fileID: 906444436}
   m_Layer: 0
   m_Name: Top Camera
   m_TagString: MainCamera
@@ -812,13 +810,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &906444436
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 906444435}
-  m_Enabled: 1
 --- !u!124 &906444437
 Behaviour:
   m_ObjectHideFlags: 0
