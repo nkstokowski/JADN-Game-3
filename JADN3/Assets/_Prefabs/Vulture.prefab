@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 95454566607143304}
   - component: {fileID: 54114754603722336}
   m_Layer: 8
-  m_Name: NavEnemy
+  m_Name: Vulture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
