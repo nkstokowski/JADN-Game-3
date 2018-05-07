@@ -2424,7 +2424,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4251825084174924, guid: 25c17989a772759479120497c1a84c53, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.275
+      value: 0.235
       objectReference: {fileID: 0}
     - target: {fileID: 4251825084174924, guid: 25c17989a772759479120497c1a84c53, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5164,6 +5164,11 @@ Prefab:
       propertyPath: sendsNotification
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114738459822465902, guid: 885dc10dc7bc847ffafa5c2a928784a3,
+        type: 2}
+      propertyPath: notificationCenter
+      value: 
+      objectReference: {fileID: 251696563}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 885dc10dc7bc847ffafa5c2a928784a3, type: 2}
   m_IsPrefabParent: 0
@@ -6838,7 +6843,7 @@ MonoBehaviour:
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294965247
-  m_UseGeometry: 0
+  m_UseGeometry: 1
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
   m_IgnoreNavMeshObstacle: 1
@@ -6847,7 +6852,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: bfa94e7db84602446a27ef9ab796a293, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 3f134117953fb814c99ec6689324aa6d, type: 2}
 --- !u!4 &868651047
 Transform:
   m_ObjectHideFlags: 0
@@ -8153,7 +8158,7 @@ MonoBehaviour:
   sendsNotification: 1
   targetObjects:
   - {fileID: 107421273}
-  notificationCenter: {fileID: 0}
+  notificationCenter: {fileID: 251696563}
 --- !u!4 &979156566 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4133814991499220, guid: e397a1c664cb20149b448fed27225674,
@@ -8710,6 +8715,11 @@ Prefab:
       propertyPath: sendsNotification
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114738459822465902, guid: 885dc10dc7bc847ffafa5c2a928784a3,
+        type: 2}
+      propertyPath: notificationCenter
+      value: 
+      objectReference: {fileID: 251696563}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 885dc10dc7bc847ffafa5c2a928784a3, type: 2}
   m_IsPrefabParent: 0
@@ -10211,7 +10221,7 @@ MonoBehaviour:
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294963711
-  m_UseGeometry: 0
+  m_UseGeometry: 1
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
   m_IgnoreNavMeshObstacle: 1
@@ -10220,7 +10230,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 5ee3037dbcd17e44eadf9b05c666e63f, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 8ba53d94f8cf91f4ab612772e4d791ab, type: 2}
 --- !u!4 &1350011861
 Transform:
   m_ObjectHideFlags: 0
@@ -14140,6 +14150,11 @@ Prefab:
       propertyPath: sendsNotification
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114738459822465902, guid: 885dc10dc7bc847ffafa5c2a928784a3,
+        type: 2}
+      propertyPath: notificationCenter
+      value: 
+      objectReference: {fileID: 251696563}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 885dc10dc7bc847ffafa5c2a928784a3, type: 2}
   m_IsPrefabParent: 0
@@ -16042,6 +16057,11 @@ Prefab:
       propertyPath: sendsNotification
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114738459822465902, guid: 885dc10dc7bc847ffafa5c2a928784a3,
+        type: 2}
+      propertyPath: notificationCenter
+      value: 
+      objectReference: {fileID: 251696563}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 885dc10dc7bc847ffafa5c2a928784a3, type: 2}
   m_IsPrefabParent: 0
@@ -16361,7 +16381,7 @@ MonoBehaviour:
   sendsNotification: 0
   targetObjects:
   - {fileID: 1237202082}
-  notificationCenter: {fileID: 0}
+  notificationCenter: {fileID: 251696563}
 --- !u!1 &2075757572 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1242085853088286, guid: 495fdf6a91ea82d41b9f563044c43860,
@@ -17182,6 +17202,11 @@ Prefab:
       propertyPath: targetObjects.Array.data[11]
       value: 
       objectReference: {fileID: 27310281}
+    - target: {fileID: 114738459822465902, guid: 885dc10dc7bc847ffafa5c2a928784a3,
+        type: 2}
+      propertyPath: notificationCenter
+      value: 
+      objectReference: {fileID: 251696563}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 885dc10dc7bc847ffafa5c2a928784a3, type: 2}
   m_IsPrefabParent: 0
