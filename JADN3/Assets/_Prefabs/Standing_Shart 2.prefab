@@ -42,11 +42,9 @@ GameObject:
   - component: {fileID: 33259095267478934}
   - component: {fileID: 23324700646085536}
   - component: {fileID: 54222536210497154}
-  - component: {fileID: 65996791485535120}
-  - component: {fileID: 114756820142327106}
   m_Layer: 8
   m_Name: ShardBase
-  m_TagString: Interact
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,9 +55,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1356379784899980}
-  m_LocalRotation: {x: 1, y: -0, z: -0, w: 6.123234e-17}
-  m_LocalPosition: {x: -5.03, y: -0.4740461, z: -8.35}
-  m_LocalScale: {x: 43.749775, y: 56.80247, z: 43.749737}
+  m_LocalRotation: {x: 0.99999964, y: 0.0007557573, z: 0.0003346286, w: -0.00017920458}
+  m_LocalPosition: {x: 4.4503703, y: -0.47166672, z: 9.481811}
+  m_LocalScale: {x: 43.74977, y: 56.80247, z: 43.749737}
   m_Children:
   - {fileID: 4364968122713932}
   m_Father: {fileID: 0}
@@ -92,7 +90,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e1c939b49d1df4593985a386a778dbce, type: 2}
+  - {fileID: 2100000, guid: bc8a4d016c5b44c00bd0ba7597eba3c5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -202,18 +200,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.02, y: 0.029081248, z: 0.017320508}
   m_Center: {x: 0, y: -0.014540624, z: -4.6566126e-10}
---- !u!65 &65996791485535120
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1785481751748264}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000001, y: 0.019999998, z: 0.017320512}
-  m_Center: {x: 0, y: -2.4651903e-32, z: -4.6566134e-10}
 --- !u!114 &114544285248093212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -227,30 +213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchType: 0
   switchOn: 0
-  sendsNotification: 0
+  sendsNotification: 1
   targetObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  notificationCenter: {fileID: 0}
---- !u!114 &114756820142327106
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1785481751748264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8c014a810a75834e969acc498708ed9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  switchType: 0
-  switchOn: 0
-  sendsNotification: 0
-  targetObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   notificationCenter: {fileID: 0}

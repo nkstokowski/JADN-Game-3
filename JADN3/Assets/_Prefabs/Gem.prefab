@@ -110,5 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 75
+  floatSpeed: 0.5
   loadSceneName: Level_3
   manager: {fileID: 0}
+  finalPosition: {x: 9.59, y: 36.31, z: 15.52}
