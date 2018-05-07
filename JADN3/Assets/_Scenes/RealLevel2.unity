@@ -8123,6 +8123,17 @@ GameObject:
   m_PrefabParentObject: {fileID: 1242085853088286, guid: 495fdf6a91ea82d41b9f563044c43860,
     type: 2}
   m_PrefabInternal: {fileID: 1333066296}
+--- !u!114 &2075757573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2075757572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93580959640b04eaea78bebb133200d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2075757578 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4326425751149790, guid: 495fdf6a91ea82d41b9f563044c43860,

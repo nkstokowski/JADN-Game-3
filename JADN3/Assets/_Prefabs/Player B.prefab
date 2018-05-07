@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 114133900158567416}
   - component: {fileID: 54000701288155270}
   - component: {fileID: 95427535171061402}
+  - component: {fileID: 114294186593384458}
   m_Layer: 9
   m_Name: Player B
   m_TagString: Player
@@ -1338,6 +1339,17 @@ MonoBehaviour:
   playerAnimator: {fileID: 95427535171061402}
   rotationSpeed: 20
   speed: 0
+--- !u!114 &114294186593384458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1242085853088286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93580959640b04eaea78bebb133200d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &136108156206534358
 CapsuleCollider:
   m_ObjectHideFlags: 1
