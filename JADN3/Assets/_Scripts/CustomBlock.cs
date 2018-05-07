@@ -40,7 +40,7 @@ public class CustomBlock : MonoBehaviour, SwitchTarget
     public float moveSpeed = 5.0f;
     public bool differentReturnSpeed = false;
     public float returnSpeed = 5.0f;
-    private bool movingForward;
+    public bool movingForward;
 
     [Header("Transformation")]
     public GameObject newBlockObject;
@@ -72,7 +72,7 @@ public class CustomBlock : MonoBehaviour, SwitchTarget
     // Destroys self.
     private void CreateBlock()
     {
-        Debug.Log("In create");
+        //Debug.Log("In create");
         GameObject block = Instantiate(newBlockObject, transform.position, transform.rotation);
         block.transform.parent = transform.parent;
         block.GetComponent<Block>().SetBlockLayer(gameObject.layer);
