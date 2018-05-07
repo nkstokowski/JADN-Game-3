@@ -1067,6 +1067,11 @@ Prefab:
       propertyPath: manager
       value: 
       objectReference: {fileID: 1459848972}
+    - target: {fileID: 114822978041730470, guid: 3e6d2daaa5d3b4807bcbca67aba0795d,
+        type: 2}
+      propertyPath: loadSceneName
+      value: FloorSwitch_Tutorial
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3e6d2daaa5d3b4807bcbca67aba0795d, type: 2}
   m_IsPrefabParent: 0
