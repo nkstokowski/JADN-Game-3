@@ -38,6 +38,8 @@ public class CustomBlock : MonoBehaviour, SwitchTarget
     public Vector3 startPosition;
     public Vector3 endPosition;
     public float moveSpeed = 5.0f;
+    public bool differentReturnSpeed = false;
+    public float returnSpeed = 5.0f;
     private bool movingForward;
 
     [Header("Transformation")]
@@ -54,7 +56,16 @@ public class CustomBlock : MonoBehaviour, SwitchTarget
     {
         // Always move towards the current target position
         Vector3 targetPosition = (movingForward) ? endPosition : startPosition;
-        transform.localPosition = Vector3.MoveTowards(transform.localPosition, targetPosition, moveSpeed * Time.deltaTime);
+        float speed;
+        if (differentReturnSpeed)
+        {
+            speed = (movingForward) ? moveSpeed : returnSpeed;
+        }
+        else
+        {
+            speed = moveSpeed;
+        }
+        transform.localPosition = Vector3.MoveTowards(transform.localPosition, targetPosition, speed * Time.deltaTime);
     }
 
     // Spawns a new block from a prefab. Block moves to this block and layer.
