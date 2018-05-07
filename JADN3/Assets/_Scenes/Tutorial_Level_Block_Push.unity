@@ -818,6 +818,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.size
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4505009051035038, guid: 673f49b90f68e48e19f1d91336ff1645, type: 2}
       propertyPath: m_LocalPosition.x
       value: -12.0336275
@@ -901,6 +906,56 @@ Prefab:
       propertyPath: skipTutorial
       value: 
       objectReference: {fileID: 522904462}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1b4e056a22cba4ea68ed5baf918c8c1a, type: 3}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[2].tag
+      value: Teleport
+      objectReference: {fileID: 0}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f0361d312de2425cbe0714e056f1519, type: 3}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[3].tag
+      value: SpellHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 381452d3176d5415da04e5215fbc5cc2, type: 3}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[4].tag
+      value: Ambient
+      objectReference: {fileID: 0}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7a904ebe7dcf139429d89dc06dc11e0f, type: 3}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[5].tag
+      value: GemCollect
+      objectReference: {fileID: 0}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89bff2cb941014666bfd750cacb0f4a8, type: 3}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[6].tag
+      value: Step
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 673f49b90f68e48e19f1d91336ff1645, type: 2}
   m_IsPrefabParent: 0
@@ -1060,7 +1115,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1518861121040136, guid: 3e6d2daaa5d3b4807bcbca67aba0795d, type: 2}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114822978041730470, guid: 3e6d2daaa5d3b4807bcbca67aba0795d,
         type: 2}
@@ -1170,7 +1225,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 0293424019b9c69418eb1a1b68c73f03, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 398d5bcdb9d64de4ba06daf90d5940c2, type: 2}
 --- !u!4 &1350011861
 Transform:
   m_ObjectHideFlags: 0

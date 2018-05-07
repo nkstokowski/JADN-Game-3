@@ -830,6 +830,7 @@ MonoBehaviour:
   moveSpeed: 5
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!208 &111033040
 NavMeshObstacle:
@@ -948,6 +949,7 @@ MonoBehaviour:
   moveSpeed: 5
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!4 &119218695 stripped
 Transform:
@@ -986,6 +988,7 @@ MonoBehaviour:
   moveSpeed: 50
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!208 &130612733
 NavMeshObstacle:
@@ -1964,6 +1967,7 @@ MonoBehaviour:
   moveSpeed: 5
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!208 &289280450
 NavMeshObstacle:
@@ -2258,6 +2262,7 @@ MonoBehaviour:
   moveSpeed: 5
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!208 &351438657
 NavMeshObstacle:
@@ -3104,6 +3109,7 @@ MonoBehaviour:
   moveSpeed: 5
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!4 &492678982 stripped
 Transform:
@@ -4129,6 +4135,7 @@ MonoBehaviour:
   moveSpeed: 15
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!1 &592216373
 GameObject:
@@ -5141,6 +5148,7 @@ MonoBehaviour:
   moveSpeed: 15
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!1001 &699206795
 Prefab:
@@ -5706,6 +5714,7 @@ MonoBehaviour:
   moveSpeed: 50
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!208 &780035877
 NavMeshObstacle:
@@ -6486,6 +6495,7 @@ MonoBehaviour:
   moveSpeed: 50
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!208 &881828945
 NavMeshObstacle:
@@ -7054,6 +7064,7 @@ MonoBehaviour:
   moveSpeed: 5
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!1 &957183572
 GameObject:
@@ -7091,6 +7102,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.size
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4505009051035038, guid: 673f49b90f68e48e19f1d91336ff1645, type: 2}
       propertyPath: m_LocalPosition.x
       value: -12.0336275
@@ -7168,6 +7184,56 @@ Prefab:
       propertyPath: skipTutorial
       value: 
       objectReference: {fileID: 85149996}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[2].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1b4e056a22cba4ea68ed5baf918c8c1a, type: 3}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[2].tag
+      value: Teleport
+      objectReference: {fileID: 0}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f0361d312de2425cbe0714e056f1519, type: 3}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[3].tag
+      value: SpellHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 381452d3176d5415da04e5215fbc5cc2, type: 3}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[4].tag
+      value: Ambient
+      objectReference: {fileID: 0}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7a904ebe7dcf139429d89dc06dc11e0f, type: 3}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[5].tag
+      value: GemCollect
+      objectReference: {fileID: 0}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89bff2cb941014666bfd750cacb0f4a8, type: 3}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[6].tag
+      value: Step
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 673f49b90f68e48e19f1d91336ff1645, type: 2}
   m_IsPrefabParent: 0
@@ -7177,6 +7243,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 964011125}
   m_Script: {fileID: 11500000, guid: 39254ee5b796b4797851c604b64bd49b, type: 3}
+--- !u!1 &964011127 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1320873785692170, guid: 673f49b90f68e48e19f1d91336ff1645,
+    type: 2}
+  m_PrefabInternal: {fileID: 964011125}
 --- !u!1001 &964239777
 Prefab:
   m_ObjectHideFlags: 0
@@ -7346,6 +7417,7 @@ MonoBehaviour:
   moveSpeed: 50
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!1001 &978709452
 Prefab:
@@ -8512,6 +8584,7 @@ MonoBehaviour:
   moveSpeed: 50
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!4 &1121380062 stripped
 Transform:
@@ -9054,6 +9127,7 @@ MonoBehaviour:
   moveSpeed: 50
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!1001 &1208499242
 Prefab:
@@ -9947,6 +10021,7 @@ MonoBehaviour:
   moveSpeed: 5
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!208 &1272372317
 NavMeshObstacle:
@@ -10805,6 +10880,7 @@ MonoBehaviour:
   moveSpeed: 50
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!208 &1388709722
 NavMeshObstacle:
@@ -11273,6 +11349,7 @@ MonoBehaviour:
   moveSpeed: 50
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!1001 &1450440321
 Prefab:
@@ -11731,6 +11808,7 @@ MonoBehaviour:
   moveSpeed: 50
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!4 &1491623126 stripped
 Transform:
@@ -12073,6 +12151,7 @@ MonoBehaviour:
   moveSpeed: 15
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!4 &1506186596 stripped
 Transform:
@@ -12121,6 +12200,7 @@ MonoBehaviour:
   moveSpeed: 50
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!1001 &1511800319
 Prefab:
@@ -13182,8 +13262,13 @@ Prefab:
     - target: {fileID: 114822978041730470, guid: 3e6d2daaa5d3b4807bcbca67aba0795d,
         type: 2}
       propertyPath: loadSceneName
-      value: RealLevel2
+      value: Dialogue_2
       objectReference: {fileID: 0}
+    - target: {fileID: 114822978041730470, guid: 3e6d2daaa5d3b4807bcbca67aba0795d,
+        type: 2}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 964011127}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3e6d2daaa5d3b4807bcbca67aba0795d, type: 2}
   m_IsPrefabParent: 0
@@ -13357,6 +13442,7 @@ MonoBehaviour:
   moveSpeed: 5
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!208 &1660615157
 NavMeshObstacle:
@@ -13779,6 +13865,7 @@ MonoBehaviour:
   moveSpeed: 50
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!208 &1714598883
 NavMeshObstacle:
@@ -14543,6 +14630,7 @@ MonoBehaviour:
   moveSpeed: 5
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!4 &1790784583 stripped
 Transform:
@@ -15304,6 +15392,7 @@ MonoBehaviour:
   moveSpeed: 5
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!208 &1879789746
 NavMeshObstacle:
@@ -16143,6 +16232,7 @@ MonoBehaviour:
   moveSpeed: 15
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!1001 &2019160711
 Prefab:
@@ -16471,6 +16561,7 @@ MonoBehaviour:
   moveSpeed: 50
   differentReturnSpeed: 0
   returnSpeed: 5
+  movingForward: 0
   newBlockObject: {fileID: 0}
 --- !u!208 &2048808643
 NavMeshObstacle:

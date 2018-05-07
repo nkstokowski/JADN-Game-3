@@ -2532,6 +2532,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114443515678678078, guid: df87d88cc1d65aa4db8e70943978e359,
+        type: 2}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 136692180}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: df87d88cc1d65aa4db8e70943978e359, type: 2}
   m_IsPrefabParent: 0
@@ -2942,7 +2947,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 559290d00c203004c8e13eec8243710f, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 4f3a934aeece11e409994a0d61478c0c, type: 2}
 --- !u!4 &1350011861
 Transform:
   m_ObjectHideFlags: 0
@@ -3557,7 +3562,7 @@ Prefab:
     - target: {fileID: 114822978041730470, guid: 3e6d2daaa5d3b4807bcbca67aba0795d,
         type: 2}
       propertyPath: loadSceneName
-      value: RealLevel2
+      value: Level4
       objectReference: {fileID: 0}
     - target: {fileID: 1518861121040136, guid: 3e6d2daaa5d3b4807bcbca67aba0795d, type: 2}
       propertyPath: m_Layer

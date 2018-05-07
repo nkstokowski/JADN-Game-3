@@ -190,6 +190,7 @@ GameObject:
   - component: {fileID: 114443515678678078}
   - component: {fileID: 95454566607143304}
   - component: {fileID: 54114754603722336}
+  - component: {fileID: 114544406480370996}
   m_Layer: 8
   m_Name: Vulture
   m_TagString: Untagged
@@ -1613,6 +1614,19 @@ MonoBehaviour:
   getPointsFromName: 1
   pointsObjectName: PathA
   startingPointIndex: 27
+  enemyAnimator: {fileID: 95454566607143304}
+  gameManager: {fileID: 0}
+--- !u!114 &114544406480370996
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1257903856665770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93580959640b04eaea78bebb133200d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &136857715888843006
 CapsuleCollider:
   m_ObjectHideFlags: 1

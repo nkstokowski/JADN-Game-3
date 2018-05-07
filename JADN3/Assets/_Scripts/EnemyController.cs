@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class EnemyController : MonoBehaviour
 {
@@ -9,9 +10,12 @@ public class EnemyController : MonoBehaviour
     public Transform[] pointsTest;
     private int destPoint = 0;
     private NavMeshAgent agent;
+    private bool active = true;
     public bool getPointsFromName = false;
     public string pointsObjectName;
     public int startingPointIndex = 0;
+    public Animator enemyAnimator;
+    public GameObject gameManager;
 
 
     void Start()
@@ -52,6 +56,18 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (active && other.gameObject.tag == "Player")
+        {
+            active = false;
+            agent.SetDestination(other.transform.position);
+            enemyAnimator.SetTrigger("Attack");
+            other.gameObject.GetComponent<NavMeshAgent>().enabled = false;
+            gameManager.GetComponent<GameManager>().LoadLevel(SceneManager.GetActiveScene().name);
+        }
+    }
+
 
     void GotoNextPoint()
     {
@@ -72,7 +88,7 @@ public class EnemyController : MonoBehaviour
     {
         // Choose the next destination point when the agent gets
         // close to the current one.
-        if (agent.enabled && !agent.pathPending && agent.remainingDistance < 0.5f)
+        if (active && agent.enabled && !agent.pathPending && agent.remainingDistance < 0.5f)
         {
             GotoNextPoint();
         }

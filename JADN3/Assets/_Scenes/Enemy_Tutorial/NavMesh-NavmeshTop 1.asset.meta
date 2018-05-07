@@ -1,11 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:JADN3/Assets/_Scenes/Enemy_Tutorial/NavMesh-NavmeshTop 1.asset.meta
-guid: 559290d00c203004c8e13eec8243710f
-timeCreated: 1525674079
-=======
-guid: 3723a83983b57e841a2b0eaee9f64cc0
-timeCreated: 1525337791
->>>>>>> 48b4864b9666d9ba59d983c8513f78b89c3acb64:JADN3/Assets/_Scenes/Level4/NavMesh-NavmeshTop 1.asset.meta
+guid: 4f3a934aeece11e409994a0d61478c0c
+timeCreated: 1525687679
 licenseType: Free
 NativeFormatImporter:
   externalObjects: {}

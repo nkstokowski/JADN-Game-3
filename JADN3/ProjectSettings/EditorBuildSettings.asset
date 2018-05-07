@@ -32,3 +32,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Dialogue_4.unity
     guid: 381dfc999fefb423a8b050eebe393efe
+  - enabled: 1
+    path: Assets/_Scenes/Flip_Tutorial.unity
+    guid: 3a992d1124b70c84599c605a72c882b9
+  - enabled: 1
+    path: Assets/_Scenes/Tutorial_Level_Block_Push.unity
+    guid: 9ef4d1a252473ff459448c2f7c69faa0
+  - enabled: 1
+    path: Assets/_Scenes/FloorSwitch_Tutorial.unity
+    guid: 02080068bb6ef8d419365049547a7a46
+  - enabled: 1
+    path: Assets/_Scenes/Tutorial_WallSwitch.unity
+    guid: 6a78b4c87ae48ca49b155c681d71efcd
+  - enabled: 1
+    path: Assets/_Scenes/Tutorial_Level_Portal.unity
+    guid: 6bdc962d6f0dfbc4da24fa7007ded7c9
+  - enabled: 1
+    path: Assets/_Scenes/Enemy_Tutorial.unity
+    guid: 195bc2e601a5623419bfbbe4eb828a36
+  - enabled: 1
+    path: Assets/_Scenes/Dialogue_5.unity
+    guid: c02cac6009845498bbbf70eb2aa4ae50

@@ -156,6 +156,8 @@ MonoBehaviour:
     tag: Default
   - clip: {fileID: 8300000, guid: 171e80ad8a2e240cb95853a5b34ddbbd, type: 3}
     tag: PortalOn
+  - clip: {fileID: 8300000, guid: 7a904ebe7dcf139429d89dc06dc11e0f, type: 3}
+    tag: GemCollect
 --- !u!114 &114612749125748286
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -188,6 +190,7 @@ MonoBehaviour:
   pausedText: {fileID: 0}
   menuText: {fileID: 0}
   resetText: {fileID: 0}
+  skipTutorial: {fileID: 0}
 --- !u!114 &114813825362291272
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657892, g: 0.4964127, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2628,7 +2628,8 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fbbe24b98305b4885bbaa15c7c8704d9, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 54222536210497154, guid: 289c81ef5c9e97246a8ba8b3454e07f1, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 289c81ef5c9e97246a8ba8b3454e07f1, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &675432141 stripped
@@ -3824,7 +3825,7 @@ Prefab:
     - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
         type: 2}
       propertyPath: sounds.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4505009051035038, guid: 673f49b90f68e48e19f1d91336ff1645, type: 2}
       propertyPath: m_LocalPosition.x
@@ -3932,17 +3933,27 @@ Prefab:
         type: 2}
       propertyPath: sounds.Array.data[5].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 89bff2cb941014666bfd750cacb0f4a8, type: 3}
+      objectReference: {fileID: 8300000, guid: 7a904ebe7dcf139429d89dc06dc11e0f, type: 3}
     - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
         type: 2}
       propertyPath: sounds.Array.data[5].tag
-      value: Step
+      value: GemCollect
       objectReference: {fileID: 0}
     - target: {fileID: 114800897425822564, guid: 673f49b90f68e48e19f1d91336ff1645,
         type: 2}
       propertyPath: skipTutorial
       value: 
       objectReference: {fileID: 1764064850}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 89bff2cb941014666bfd750cacb0f4a8, type: 3}
+    - target: {fileID: 114383031837197820, guid: 673f49b90f68e48e19f1d91336ff1645,
+        type: 2}
+      propertyPath: sounds.Array.data[6].tag
+      value: Step
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 673f49b90f68e48e19f1d91336ff1645, type: 2}
   m_IsPrefabParent: 0

@@ -24,7 +24,8 @@ public class Gem : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		if(other.gameObject.tag == "Player") {
-			startFloat = true;
+            FindObjectOfType<AudioManager>().PlaySoundWithTag("GemCollect");
+            startFloat = true;
 			GemFloat();
 		}
 	}
