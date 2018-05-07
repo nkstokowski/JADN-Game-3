@@ -35,6 +35,7 @@ public class Spell : MonoBehaviour {
             }
             objectPooler.ReQueue(this.gameObject, "Spell");
 			Instantiate (spell, gameObject.transform.position, Quaternion.identity);
+            FindObjectOfType<AudioManager>().PlaySoundWithTag("SpellHit");
 			Invoke ("SpellDeath", 1f);
         }
 
